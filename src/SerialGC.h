@@ -30,10 +30,11 @@ namespace VLCB
     SerialGC(typeof(Serial)& _serial = Serial) : serial(_serial) {}
     bool begin();
 
-    bool available() override;
-    CANFrame getNextCanFrame() override;
-    bool sendCanFrame(CANFrame *frame) override;
-    void reset() override;
+    virtual bool available() override;
+    virtual CANFrame getNextCanFrame() override;
+    virtual bool sendCanFrame(CANFrame *frame) override;
+    virtual void reset() override;
+    virtual byte getHardwareType() { return CAN_HW_SERIAL; };
 
     virtual unsigned int receiveCounter() override { return receivedCount; }
     virtual unsigned int transmitCounter() override { return transmitCount; }

@@ -518,9 +518,9 @@ void MinimumNodeService::handleModeMessage(const VlcbMessage *msg, unsigned int 
       controller->getModuleConfig()->setHeartbeat(!noHeartbeat);
       break;
       
-    case MODE_FCU_COMPATABILITY_ON:
-    case MODE_FCU_COMPATABILITY_OFF:
-      notFcuCompatible = (requestedMode == MODE_FCU_COMPATABILITY_OFF);
+    case MODE_FCUCOMPAT_ON:
+    case MODE_FCUCOMPAT_OFF:
+      notFcuCompatible = (requestedMode == MODE_FCUCOMPAT_OFF);
       controller->getModuleConfig()->setFcuCompatability(!notFcuCompatible);
       break;
       

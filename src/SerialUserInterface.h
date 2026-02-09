@@ -15,7 +15,7 @@ namespace VLCB
 class SerialUserInterface : public Service
 {
 public:
-  virtual VlcbServiceTypes getServiceID() const override { return SERVICE_ID_HIDDEN; };
+  virtual VlcbServiceTypes getServiceID() const override { return SERVICE_ID_NONE; };
   virtual byte getServiceVersionID() const override { return 1; };
 
   virtual void process(const Action *action) override;

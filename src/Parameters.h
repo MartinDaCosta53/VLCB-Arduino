@@ -18,7 +18,7 @@ public:
   explicit Parameters()
   {
     params[PAR_NUM] = 20;                     //  0 num params = 20
-    params[PAR_MANU] = MANU_MERG_VLCB;              //  1 manf = MERG, 165
+    params[PAR_MANU] = MANU_MERG;              //  1 manf = MERG, 165
     params[PAR_EVTNUM] = 0;   //  4 num events
     params[PAR_EVNUM] = 0;      //  5 num evs per event
     params[PAR_NVNUM] = 0;      //  6 num NVs

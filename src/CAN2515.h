@@ -41,11 +41,11 @@ public:
 #else
   bool begin(bool poll = false, SPIClass & spi = SPI);
 #endif
-  bool available() override;
-  CANFrame getNextCanFrame() override;
-  bool sendCanFrame(CANFrame *frame) override;
-  void reset() override;
-  virtual byte getHardwareType() override { return 4; };
+  virtual bool available() override;
+  virtual CANFrame getNextCanFrame() override;
+  virtual bool sendCanFrame(CANFrame *frame) override;
+  virtual void reset() override;
+  virtual byte getHardwareType() override { return CAN_HW_MCP2515; };
 
   // these methods are specific to this implementation
   // they are not declared or implemented by the Transport interface class
