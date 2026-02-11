@@ -6,7 +6,6 @@
 #pragma once
 
 #include "Service.h"
-#include <vlcbdefs.hpp>
 
 namespace VLCB 
 {
@@ -20,35 +19,28 @@ public:
 
   virtual void process(const Action * action) override;
 
-  virtual VlcbServiceTypes getServiceID() const override { return SERVICE_ID_OLD_TEACH; }
-  virtual byte getServiceVersionID() const override { return 1; }
   virtual Data getServiceData() override;
- 
 
   void enableLearn();
   void inhibitLearn();
 
-private:
+protected:
   bool bLearn = false;
   byte (*validatorFunc)(int, int, byte, byte) = nullptr;
+  unsigned int diagEventsTaught = 0;
 
-  void handleMessage(const VlcbMessage *msg);
+  virtual void handleMessage(const VlcbMessage *msg);
+  
+private:
   void handleLearnMode(const VlcbMessage *msg, unsigned int nn);
   void handleLearn(unsigned int nn);
-  void handleUnlearnEvent(const VlcbMessage *msg, unsigned int nn, unsigned int en);
+  void handleUnlearnEvent(const VlcbMessage *msg, unsigned int nn);
   void handleUnlearn(unsigned int nn);
   void handleRequestEventCount(unsigned int nn);
   void handleReadEvents(unsigned int nn);
-  void handleReadEventIndex(unsigned int nn, byte eventIndex);
   void handleReadEventVariable(const VlcbMessage *msg, unsigned int nn);
   void handleClearEvents(unsigned int nn);
   void handleGetFreeEventSlots(unsigned int nn);
-  void handleLearnEvent(const VlcbMessage *msg, unsigned int nn, unsigned int en);
-  void handleLearnEventIndex(const VlcbMessage *msg);
-  void handleRequestEventVariable(const VlcbMessage *msg, unsigned int nn, unsigned int en);
-    
-protected:
-  unsigned int diagEventsTaught = 0;
 };
 
 }  // VLCB
