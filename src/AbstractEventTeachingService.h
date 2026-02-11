@@ -13,7 +13,7 @@ namespace VLCB
 
 struct VlcbMessage;
 
-class EventTeachingService : public Service 
+class AbstractEventTeachingService : public Service 
 {
 public:
   void setEventValidator(byte (*func)(int, int, byte, byte)) { validatorFunc = func; }

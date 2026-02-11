@@ -5,33 +5,33 @@
 
 #include <Streaming.h>
 
-#include "EventTeachingService.h"
+#include "AbstractEventTeachingService.h"
 #include "Configuration.h"
 #include <Controller.h>
 #include <vlcbdefs.hpp>
 
 namespace VLCB {
-Service::Data EventTeachingService::getServiceData()
+Service::Data AbstractEventTeachingService::getServiceData()
 {
   Configuration *module_config = controller->getModuleConfig();
   return { module_config->getNumEvents(), module_config->getNumEVs(), 0 };
 }
 
-void EventTeachingService::enableLearn() 
+void AbstractEventTeachingService::enableLearn() 
 {
   bLearn = true;
   //DEBUG_SERIAL << F("ets> set learn mode ok") << endl;
   controller->setParamFlag(PF_LRN, true);
 }
 
-void EventTeachingService::inhibitLearn() 
+void AbstractEventTeachingService::inhibitLearn() 
 {
   bLearn = false;
   //DEBUG_SERIAL << F("ets> learn mode off") << endl;
   controller->setParamFlag(PF_LRN, false);
 }
 
-void EventTeachingService::process(const Action *action)
+void AbstractEventTeachingService::process(const Action *action)
 {
   if (action != nullptr && action->actionType == ACT_MESSAGE_IN)
   {
@@ -39,7 +39,7 @@ void EventTeachingService::process(const Action *action)
   }
 }
 
-void EventTeachingService::handleMessage(const VlcbMessage *msg) 
+void AbstractEventTeachingService::handleMessage(const VlcbMessage *msg) 
 {
   unsigned int opc = msg->data[0];
   unsigned int nn = Configuration::getTwoBytes(&msg->data[1]);
@@ -116,7 +116,7 @@ void EventTeachingService::handleMessage(const VlcbMessage *msg)
   }
 }
 
-void EventTeachingService::handleLearnMode(const VlcbMessage *msg, unsigned int nn)
+void AbstractEventTeachingService::handleLearnMode(const VlcbMessage *msg, unsigned int nn)
 {
   //DEBUG_SERIAL << F("ets> MODE -- request op-code received for NN = ") << nn << endl;
   if (!isThisNodeNumber(nn))
@@ -143,7 +143,7 @@ void EventTeachingService::handleLearnMode(const VlcbMessage *msg, unsigned int 
   controller->messageActedOn();
 }
 
-void EventTeachingService::handleLearn(unsigned int nn)
+void AbstractEventTeachingService::handleLearn(unsigned int nn)
 {
   //DEBUG_SERIAL << F("> NNLRN for node = ") << nn << F(", learn mode on") << endl;
 
@@ -162,7 +162,7 @@ void EventTeachingService::handleLearn(unsigned int nn)
   }
 }
 
-void EventTeachingService::handleUnlearnEvent(const VlcbMessage *msg, unsigned int nn, unsigned int en)
+void AbstractEventTeachingService::handleUnlearnEvent(const VlcbMessage *msg, unsigned int nn, unsigned int en)
 {  
   // DEBUG_SERIAL << F("ets> EVULN for nn = ") << nn << F(", en = ") << en << endl;
 
@@ -206,7 +206,7 @@ void EventTeachingService::handleUnlearnEvent(const VlcbMessage *msg, unsigned i
   controller->sendGRSP(OPC_EVULN, getServiceID(), GRSP_OK);
 }
 
-void EventTeachingService::handleUnlearn(unsigned int nn)
+void AbstractEventTeachingService::handleUnlearn(unsigned int nn)
 {
   //DEBUG_SERIAL << F("ets> NNULN for nn = ") << nn << endl;
   if (!isThisNodeNumber(nn))
@@ -219,7 +219,7 @@ void EventTeachingService::handleUnlearn(unsigned int nn)
   inhibitLearn();
 }
 
-void EventTeachingService::handleRequestEventCount(unsigned int nn)
+void AbstractEventTeachingService::handleRequestEventCount(unsigned int nn)
 {
   // DEBUG_SERIAL << F("ets> RQEVN -- number of stored events for nn = ") << nn << endl;
 
@@ -234,7 +234,7 @@ void EventTeachingService::handleRequestEventCount(unsigned int nn)
   controller->sendMessageWithNN(OPC_NUMEV, controller->getModuleConfig()->numEvents());
 }
 
-void EventTeachingService::handleReadEvents(unsigned int nn)
+void AbstractEventTeachingService::handleReadEvents(unsigned int nn)
 {
   //DEBUG_SERIAL << F("ets> NERD : request all stored events for nn = ") << nn << endl;
 
@@ -268,7 +268,7 @@ void EventTeachingService::handleReadEvents(unsigned int nn)
   }    // loop each ev
 }
 
-void EventTeachingService::handleReadEventIndex(unsigned int nn, byte eventIndex)
+void AbstractEventTeachingService::handleReadEventIndex(unsigned int nn, byte eventIndex)
 {
   // DEBUG_SERIAL << F("ets> NERD : request all stored events for nn = ") << nn << endl;
 
@@ -302,7 +302,7 @@ void EventTeachingService::handleReadEventIndex(unsigned int nn, byte eventIndex
   controller->sendMessage(&response);
 }
 
-void EventTeachingService::handleReadEventVariable(const VlcbMessage *msg, unsigned int nn)
+void AbstractEventTeachingService::handleReadEventVariable(const VlcbMessage *msg, unsigned int nn)
 {
   if (!isThisNodeNumber(nn))
   {
@@ -365,7 +365,7 @@ void EventTeachingService::handleReadEventVariable(const VlcbMessage *msg, unsig
   }
 }
 
-void EventTeachingService::handleClearEvents(unsigned int nn)
+void AbstractEventTeachingService::handleClearEvents(unsigned int nn)
 {
   if (!isThisNodeNumber(nn))
   {
@@ -402,7 +402,7 @@ void EventTeachingService::handleClearEvents(unsigned int nn)
   controller->sendGRSP(OPC_NNCLR, getServiceID(), GRSP_OK);
 }
 
-void EventTeachingService::handleGetFreeEventSlots(unsigned int nn)
+void AbstractEventTeachingService::handleGetFreeEventSlots(unsigned int nn)
 {
   if (!isThisNodeNumber(nn))
   {
@@ -427,7 +427,7 @@ void EventTeachingService::handleGetFreeEventSlots(unsigned int nn)
   controller->sendMessageWithNN(OPC_EVNLF, free_slots);
 }
 
-void EventTeachingService::handleLearnEvent(const VlcbMessage *msg, unsigned int nn, unsigned int en)
+void AbstractEventTeachingService::handleLearnEvent(const VlcbMessage *msg, unsigned int nn, unsigned int en)
 {
   // DEBUG_SERIAL << endl << F("ets> EVLRN for source nn = ") << nn << endl;
 
@@ -508,7 +508,7 @@ void EventTeachingService::handleLearnEvent(const VlcbMessage *msg, unsigned int
   ++diagEventsTaught;
 }
 
-void EventTeachingService::handleLearnEventIndex(const VlcbMessage *msg)
+void AbstractEventTeachingService::handleLearnEventIndex(const VlcbMessage *msg)
 {
   //DEBUG_SERIAL << endl << F("ets> EVLRNI for source nn = ") << nn << endl;
 
@@ -593,7 +593,7 @@ void EventTeachingService::handleLearnEventIndex(const VlcbMessage *msg)
   ++diagEventsTaught;
 }
 
-void EventTeachingService::handleRequestEventVariable(const VlcbMessage *msg, unsigned int nn, unsigned int en)
+void AbstractEventTeachingService::handleRequestEventVariable(const VlcbMessage *msg, unsigned int nn, unsigned int en)
 {
   if (!bLearn)
   {
