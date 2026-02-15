@@ -32,14 +32,6 @@ void AbstractEventTeachingService::inhibitLearn()
   controller->setParamFlag(PF_LRN, false);
 }
 
-void AbstractEventTeachingService::process(const Action *action)
-{
-  if (action != nullptr && action->actionType == ACT_MESSAGE_IN)
-  {
-    handleMessage(&action->vlcbMessage);
-  }
-}
-
 void AbstractEventTeachingService::handleMessage(const VlcbMessage *msg) 
 {
   unsigned int opc = msg->data[0];

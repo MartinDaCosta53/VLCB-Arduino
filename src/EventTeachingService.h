@@ -13,12 +13,12 @@ namespace VLCB
 class EventTeachingService : public AbstractEventTeachingService
 {
 public:
+  virtual void process(const Action * action) override;
   virtual VlcbServiceTypes getServiceID() const override { return SERVICE_ID_OLD_TEACH; }
   virtual byte getServiceVersionID() const override { return 1; }
 
-  virtual void handleMessage(const VlcbMessage *msg) override;
-
 private:
+  void handleMessage(const VlcbMessage *msg);
   void handleRequestEventVariable(const VlcbMessage *msg, unsigned int nn, unsigned int en);
   void handleLearnEvent(const VlcbMessage *msg, unsigned int nn, unsigned int en);
   

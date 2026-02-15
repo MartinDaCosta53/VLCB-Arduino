@@ -17,8 +17,6 @@ class AbstractEventTeachingService : public Service
 public:
   void setEventValidator(byte (*func)(int, int, byte, byte)) { validatorFunc = func; }
 
-  virtual void process(const Action * action) override;
-
   virtual Data getServiceData() override;
 
   void enableLearn();
@@ -29,7 +27,7 @@ protected:
   byte (*validatorFunc)(int, int, byte, byte) = nullptr;
   unsigned int diagEventsTaught = 0;
 
-  virtual void handleMessage(const VlcbMessage *msg);
+  void handleMessage(const VlcbMessage *msg);
   
 private:
   void handleLearnMode(const VlcbMessage *msg, unsigned int nn);

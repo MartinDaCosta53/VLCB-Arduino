@@ -11,6 +11,14 @@
 namespace VLCB
 {
 
+void EventTeachingService::process(const Action *action)
+{
+  if (action != nullptr && action->actionType == ACT_MESSAGE_IN)
+  {
+    handleMessage(&action->vlcbMessage);
+  }
+}
+
 void EventTeachingService::handleMessage(const VlcbMessage *msg) 
 {
   unsigned int opc = msg->data[0];
