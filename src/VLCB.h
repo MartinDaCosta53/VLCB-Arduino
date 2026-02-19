@@ -19,6 +19,7 @@
 #include <EventProducerService.h>
 #include <ConsumeOwnEventsService.h>
 #include <EventTeachingService.h>
+#include <EventSlotTeachingService.h>
 #include <LongMessageService.h>
 #include <SerialUserInterface.h>
 

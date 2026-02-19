@@ -10,18 +10,17 @@
 namespace VLCB
 {
 
-class EventTeachingService : public AbstractEventTeachingService
+class EventSlotTeachingService : public AbstractEventTeachingService
 {
 public:
   virtual void process(const Action * action) override;
-  virtual VlcbServiceTypes getServiceID() const override { return SERVICE_ID_OLD_TEACH; }
+  virtual VlcbServiceTypes getServiceID() const override { return SERVICE_ID_TEACH; }
   virtual byte getServiceVersionID() const override { return 1; }
 
 private:
   void handleMessage(const VlcbMessage *msg);
-  void handleRequestEventVariable(const VlcbMessage *msg, unsigned int nn, unsigned int en);
-  void handleLearnEvent(const VlcbMessage *msg, unsigned int nn, unsigned int en);
-  
+  void handleLearnEventIndex(const VlcbMessage *msg);
+  void handleReadEventIndex(unsigned int nn, byte eventIndex);
 };
 
 }  // VLCB

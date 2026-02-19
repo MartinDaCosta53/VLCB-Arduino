@@ -68,8 +68,12 @@ add_library(core_library OBJECT
         src/CanServiceWithDiagnostics.h
         src/EventConsumerService.cpp
         src/EventConsumerService.h
+        src/AbstractEventTeachingService.cpp
+        src/AbstractEventTeachingService.h
         src/EventTeachingService.cpp
         src/EventTeachingService.h
+        src/EventSlotTeachingService.cpp
+        src/EventSlotTeachingService.h
         src/EventProducerService.cpp
         src/EventProducerService.h
         src/NodeVariableService.cpp

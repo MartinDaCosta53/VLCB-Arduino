@@ -91,9 +91,14 @@ The parameters should be
 * ```data1``` - ```data3``` : Up to three data bytes to go with the event.
 
 ### EventTeachingService
-Facilitates teaching events. 
+Facilitates teaching events using classic event teaching.
+Events are taught (created), updated and read by using the event node number
+and event number as key to the event, or putting the node into learn mode.
+This means that the node number / event number pair must be unique.
+
 Both consumed and produced events can be taught.
 
+#### Event validation
 A user sketch can register an event validation callback with 
 ```setEventValidator()```. 
 The signature of the validator function shall be:
@@ -103,6 +108,13 @@ byte eventValidator(int nn, int en, byte evNum, byte evValue);
 It shall return a response code ```GRSP_OK``` (0) if the taught event is accepted
 or any other ```GRSP_XXX``` code or ```CMDERR_XXX``` code for failure.
 For failures this error code will be the response to EVLRN request.
+
+### EventSlotTeachingService
+Facilitates teaching events using indexed (slot) event teaching.
+Here events are taught (created), updated and read by using event indexes.
+
+The same event (with the same node number / event number) can be taught
+to different slots.
 
 ### ConsumeOwnEventsService
 This service facilitates sent events to be received by the same module.

@@ -103,7 +103,7 @@ VLCB::CanService canService(&can2515);
 VLCB::NodeVariableService nvService;
 VLCB::ConsumeOwnEventsService coeService;
 VLCB::EventConsumerService ecService;
-VLCB::EventTeachingService etService;
+VLCB::EventSlotTeachingService etService;
 VLCB::EventProducerService epService;
 
 //

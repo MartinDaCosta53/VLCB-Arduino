@@ -2,6 +2,14 @@
 
 Releases are listed on GitHub: https://github.com/SvenRosvall/VLCB-Arduino/releases
 
+# Current development - pending release
+
+Provide service data.
+
+Split EventTeachingService into classic teaching and event index (slot) teaching.
+This reduces memory footprint as code for both teaching methods need to be
+included in user sketches.
+
 # 2.1.0 - Example sketch clean-up
 Update example sketches for better readability.
 
