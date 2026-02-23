@@ -15,10 +15,10 @@
 #include <MinimumNodeServiceWithDiagnostics.h>
 #include <CanServiceWithDiagnostics.h>
 #include <NodeVariableService.h>
-#include <EventConsumerService.h>
-#include <EventProducerService.h>
+#include <EventConsumerServiceWithDiagnostics.h>
+#include <EventProducerServiceWithDiagnostics.h>
 #include <ConsumeOwnEventsService.h>
-#include <EventTeachingService.h>
+#include <EventTeachingServiceWithDiagnostics.h>
 #include <EventSlotTeachingService.h>
 #include <LongMessageService.h>
 #include <SerialUserInterface.h>
