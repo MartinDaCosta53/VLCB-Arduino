@@ -102,7 +102,8 @@ void EventSlotTeachingService::handleLearnEventIndex(const VlcbMessage *msg)
   byte eventTableNNEN[EE_HASH_BYTES];
   module_config->readEvent(index, eventTableNNEN);
 
-  if (!Configuration::nnenEquals(eventTableNNEN, &msg->data[1]))
+  if (!Configuration::nnenEquals(eventTableNNEN, &msg->data[1])
+      && !Configuration::nnenEquals(emptyNNEN, &msg->data[1]))
   {
     module_config->writeEvent(index, &msg->data[1]);
     //DEBUG_SERIAL << F("ets> Writing EV Index = ") << index << F(" Node Number ") << (msg->data[1] << 8) + msg->data[2] << F(" Event Number ") << (msg->data[3] << 8) + msg->data[4] <<endl;

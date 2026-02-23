@@ -520,6 +520,24 @@ void testTeachEventIndexedWithNullNNEN()
   
   leaveLearnMode(controller);
 
+  // Verify that NN/EN is unchanged
+  // Data: OP, NN, Event index
+  msg = {4, { OPC_NENRD, 0x01, 0x04, 7}};
+  mockTransportService->setNextMessage(msg);
+
+  process(controller);
+
+  assertEquals(1, mockTransportService->sent_messages.size());
+  assertEquals(OPC_ENRSP, mockTransportService->sent_messages[0].data[0]);
+  assertEquals(0x01, mockTransportService->sent_messages[0].data[1]);
+  assertEquals(0x04, mockTransportService->sent_messages[0].data[2]);
+  assertEquals(0x05, mockTransportService->sent_messages[0].data[3]);
+  assertEquals(0x06, mockTransportService->sent_messages[0].data[4]);
+  assertEquals(0x07, mockTransportService->sent_messages[0].data[5]);
+  assertEquals(0x08, mockTransportService->sent_messages[0].data[6]);
+  assertEquals(7, mockTransportService->sent_messages[0].data[7]);
+  mockTransportService->clearMessages();
+
   // Verify the event variable 1
   // Data: OP, NN, Event index, EV#
   msg = {6, {OPC_REVAL, 0x01, 0x04, 7, 1}};
