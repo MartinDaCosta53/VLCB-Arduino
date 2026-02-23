@@ -60,8 +60,6 @@ void EventSlotTeachingService::handleLearnEventIndex(const VlcbMessage *msg)
     return;
   }
 
-  unsigned int nn = Configuration::getTwoBytes(&msg->data[1]);
-  unsigned int en = Configuration::getTwoBytes(&msg->data[3]);
   byte index = msg->data[5];
   byte evIndex = msg->data[6];
   byte evVal = msg->data[7];
@@ -82,7 +80,8 @@ void EventSlotTeachingService::handleLearnEventIndex(const VlcbMessage *msg)
     return;
   }
   
-  if (nn == 0 && en == 0 && evIndex == 0 && evVal == 0)
+  byte emptyNNEN[] = {0, 0, 0, 0};
+  if (Configuration::nnenEquals(emptyNNEN,&msg->data[1]) && evIndex == 0 && evVal == 0)
   {
     // DEBUG_SERIAL << F("ets> deleting event at index = ") << index << F(", evs ") << endl;
     module_config->cleareventEEPROM(index);
