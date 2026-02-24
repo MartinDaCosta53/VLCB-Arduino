@@ -80,22 +80,20 @@ void EventSlotTeachingService::handleLearnEventIndex(const VlcbMessage *msg)
     return;
   }
   
-  if (evIndex == 0)
+  byte emptyNNEN[] = {0, 0, 0, 0};
+  if (Configuration::nnenEquals(emptyNNEN,&msg->data[1]) && evIndex == 0 && evVal == 0)
   {
-    if (evVal == 0)
-    {
-      // DEBUG_SERIAL << F("ets> deleting event at index = ") << index << F(", evs ") << endl;
-      module_config->cleareventEEPROM(index);
+    // DEBUG_SERIAL << F("ets> deleting event at index = ") << index << F(", evs ") << endl;
+    module_config->cleareventEEPROM(index);
 
-      // update hash table
-      module_config->updateEvHashEntry(index);
+    // update hash table
+    module_config->updateEvHashEntry(index);
 
-      controller->sendWRACK();
-      controller->sendGRSP(OPC_EVLRNI, getServiceID(), GRSP_OK);
+    controller->sendWRACK();
+    controller->sendGRSP(OPC_EVLRNI, getServiceID(), GRSP_OK);
 
-      return;
-    } 
-  }
+    return;
+  } 
 
   // write the event to EEPROM at this location -- EVs are indexed from 1 but storage offsets start at zero !!
   //DEBUG_SERIAL << F("ets> writing EV = ") << evIndex << F(", at index = ") << index << F(", offset = ") << (module_config->EE_EVENTS_START + (index * module_config->EE_BYTES_PER_EVENT)) << endl;
@@ -104,7 +102,8 @@ void EventSlotTeachingService::handleLearnEventIndex(const VlcbMessage *msg)
   byte eventTableNNEN[EE_HASH_BYTES];
   module_config->readEvent(index, eventTableNNEN);
 
-  if (!Configuration::nnenEquals(eventTableNNEN, &msg->data[1]))
+  if (!Configuration::nnenEquals(eventTableNNEN, &msg->data[1])
+      && !Configuration::nnenEquals(emptyNNEN, &msg->data[1]))
   {
     module_config->writeEvent(index, &msg->data[1]);
     //DEBUG_SERIAL << F("ets> Writing EV Index = ") << index << F(" Node Number ") << (msg->data[1] << 8) + msg->data[2] << F(" Event Number ") << (msg->data[3] << 8) + msg->data[4] <<endl;

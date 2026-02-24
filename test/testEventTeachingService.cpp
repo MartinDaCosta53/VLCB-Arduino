@@ -496,7 +496,7 @@ void testTeachEventIndexedWithNullNNEN()
 
   // Teach an event
   // Data: OP, NN, EN, Event index, EV#, EV Value
-  VLCB::VlcbMessage msg = {8, {OPC_EVLRNI, 0x05, 0x06, 0x07, 0x08, 0, 1, 42}};
+  VLCB::VlcbMessage msg = {8, {OPC_EVLRNI, 0x05, 0x06, 0x07, 0x08, 7, 1, 42}};
   mockTransportService->setNextMessage(msg);
 
   process(controller);
@@ -508,7 +508,7 @@ void testTeachEventIndexedWithNullNNEN()
 
   // Teach an event with null NN/EN
   // Data: OP, NN, EN, Event index, EV#, EV Value
-  msg = {8, {OPC_EVLRNI, 0, 0, 0, 0, 0, 1, 43}};
+  msg = {8, {OPC_EVLRNI, 0, 0, 0, 0, 7, 1, 43}};
   mockTransportService->setNextMessage(msg);
 
   process(controller);
@@ -520,9 +520,27 @@ void testTeachEventIndexedWithNullNNEN()
   
   leaveLearnMode(controller);
 
+  // Verify that NN/EN is unchanged
+  // Data: OP, NN, Event index
+  msg = {4, { OPC_NENRD, 0x01, 0x04, 7}};
+  mockTransportService->setNextMessage(msg);
+
+  process(controller);
+
+  assertEquals(1, mockTransportService->sent_messages.size());
+  assertEquals(OPC_ENRSP, mockTransportService->sent_messages[0].data[0]);
+  assertEquals(0x01, mockTransportService->sent_messages[0].data[1]);
+  assertEquals(0x04, mockTransportService->sent_messages[0].data[2]);
+  assertEquals(0x05, mockTransportService->sent_messages[0].data[3]);
+  assertEquals(0x06, mockTransportService->sent_messages[0].data[4]);
+  assertEquals(0x07, mockTransportService->sent_messages[0].data[5]);
+  assertEquals(0x08, mockTransportService->sent_messages[0].data[6]);
+  assertEquals(7, mockTransportService->sent_messages[0].data[7]);
+  mockTransportService->clearMessages();
+
   // Verify the event variable 1
   // Data: OP, NN, Event index, EV#
-  msg = {6, {OPC_REVAL, 0x01, 0x04, 0, 1}};
+  msg = {6, {OPC_REVAL, 0x01, 0x04, 7, 1}};
   mockTransportService->setNextMessage(msg);
 
   process(controller);
@@ -531,7 +549,7 @@ void testTeachEventIndexedWithNullNNEN()
   assertEquals(OPC_NEVAL, mockTransportService->sent_messages[0].data[0]);
   assertEquals(0x01, mockTransportService->sent_messages[0].data[1]);
   assertEquals(0x04, mockTransportService->sent_messages[0].data[2]);
-  assertEquals(0, mockTransportService->sent_messages[0].data[3]);
+  assertEquals(7, mockTransportService->sent_messages[0].data[3]);
   assertEquals(1, mockTransportService->sent_messages[0].data[4]);
   assertEquals(43, mockTransportService->sent_messages[0].data[5]);
   mockTransportService->clearMessages();
@@ -547,7 +565,7 @@ void testTeachEventIndexedWithEV0()
 
   // Teach an event
   // Data: OP, NN, EN, Event index, EV#, EV Value
-  VLCB::VlcbMessage msg = {8, {OPC_EVLRNI, 0x05, 0x06, 0x07, 0x08, 0, 1, 42}};
+  VLCB::VlcbMessage msg = {8, {OPC_EVLRNI, 0x05, 0x06, 0x07, 0x08, 7, 1, 42}};
   mockTransportService->setNextMessage(msg);
 
   process(controller);
@@ -559,7 +577,7 @@ void testTeachEventIndexedWithEV0()
 
   // Teach an event with null NN/EN
   // Data: OP, NN, EN, Event index, EV#, EV Value
-  msg = {8, {OPC_EVLRNI, 0x04, 0x06, 0x05, 0x08, 0, 0, 17}};
+  msg = {8, {OPC_EVLRNI, 0x04, 0x06, 0x05, 0x08, 7, 0, 17}};
   mockTransportService->setNextMessage(msg);
 
   process(controller);
@@ -569,9 +587,9 @@ void testTeachEventIndexedWithEV0()
   assertEquals(OPC_GRSP, mockTransportService->sent_messages[1].data[0]);
   mockTransportService->clearMessages();
 
-  // Read event at index 0
+  // Read event at index 7
   // Data: OP, NN, Event index
-  msg = {4, { OPC_NENRD, 0x01, 0x04, 0}};
+  msg = {4, { OPC_NENRD, 0x01, 0x04, 7}};
   mockTransportService->setNextMessage(msg);
 
   process(controller);
@@ -584,7 +602,46 @@ void testTeachEventIndexedWithEV0()
   assertEquals(0x06, mockTransportService->sent_messages[0].data[4]);
   assertEquals(0x05, mockTransportService->sent_messages[0].data[5]);
   assertEquals(0x08, mockTransportService->sent_messages[0].data[6]);
-  assertEquals(0, mockTransportService->sent_messages[0].data[7]);
+  assertEquals(7, mockTransportService->sent_messages[0].data[7]);
+  mockTransportService->clearMessages();
+}
+
+void testTeachEventIndexedWithoutEV()
+{
+  test();
+
+  VLCB::Controller controller = createControllerWithEventSlots();
+
+  enterLearnMode(controller);
+
+  // Teach an event
+  // Data: OP, NN, EN, Event index, EV#, EV Value
+  VLCB::VlcbMessage msg = {8, {OPC_EVLRNI, 0x05, 0x06, 0x07, 0x08, 7, 0, 0}};
+  mockTransportService->setNextMessage(msg);
+
+  process(controller);
+
+  assertEquals(2, mockTransportService->sent_messages.size());
+  assertEquals(OPC_WRACK, mockTransportService->sent_messages[0].data[0]);
+  assertEquals(OPC_GRSP, mockTransportService->sent_messages[1].data[0]);
+  mockTransportService->clearMessages();
+
+  // Read event at index 0
+  // Data: OP, NN, Event index
+  msg = {4, { OPC_NENRD, 0x01, 0x04, 7}};
+  mockTransportService->setNextMessage(msg);
+
+  process(controller);
+
+  assertEquals(1, mockTransportService->sent_messages.size());
+  assertEquals(OPC_ENRSP, mockTransportService->sent_messages[0].data[0]);
+  assertEquals(0x01, mockTransportService->sent_messages[0].data[1]);
+  assertEquals(0x04, mockTransportService->sent_messages[0].data[2]);
+  assertEquals(0x05, mockTransportService->sent_messages[0].data[3]);
+  assertEquals(0x06, mockTransportService->sent_messages[0].data[4]);
+  assertEquals(0x07, mockTransportService->sent_messages[0].data[5]);
+  assertEquals(0x08, mockTransportService->sent_messages[0].data[6]);
+  assertEquals(7, mockTransportService->sent_messages[0].data[7]);
   mockTransportService->clearMessages();
 }
 
@@ -598,7 +655,7 @@ void testLearnEventIndexedDelete()
 
   // Teach an event
   // Data: OP, NN, EN, Event index, EV#, EV Value
-  VLCB::VlcbMessage msg = {8, {OPC_EVLRNI, 0x05, 0x06, 0x07, 0x08, 0, 1, 42}};
+  VLCB::VlcbMessage msg = {8, {OPC_EVLRNI, 0x05, 0x06, 0x07, 0x08, 7, 1, 42}};
   mockTransportService->setNextMessage(msg);
 
   process(controller);
@@ -612,7 +669,7 @@ void testLearnEventIndexedDelete()
 
   // Verify the event variable 1
   // Data: OP, NN, Event index, EV#
-  msg = {6, {OPC_REVAL, 0x01, 0x04, 0, 1}};
+  msg = {6, {OPC_REVAL, 0x01, 0x04, 7, 1}};
   mockTransportService->setNextMessage(msg);
 
   process(controller);
@@ -621,15 +678,15 @@ void testLearnEventIndexedDelete()
   assertEquals(OPC_NEVAL, mockTransportService->sent_messages[0].data[0]);
   assertEquals(0x01, mockTransportService->sent_messages[0].data[1]);
   assertEquals(0x04, mockTransportService->sent_messages[0].data[2]);
-  assertEquals(0, mockTransportService->sent_messages[0].data[3]);
+  assertEquals(7, mockTransportService->sent_messages[0].data[3]);
   assertEquals(1, mockTransportService->sent_messages[0].data[4]);
   assertEquals(42, mockTransportService->sent_messages[0].data[5]);
   mockTransportService->clearMessages();
   
   enterLearnMode(controller);
   
-  // Delete the event. Do this with EV#==0 and EV value==0
-  msg = {8, {OPC_EVLRNI, 0x05, 0x06, 0x07, 0x08, 0, 0, 0}};
+  // Delete the event. Do this with NN==0, EN==0, EV#==0 and EV value==0
+  msg = {8, {OPC_EVLRNI, 0, 0, 0, 0, 7, 0, 0}};
   mockTransportService->setNextMessage(msg);
 
   process(controller);
@@ -1528,6 +1585,7 @@ void testEventTeachingService()
   testTeachEventIndexedAndClear();
   testTeachEventIndexedWithNullNNEN(); // updates EV for a slot
   testTeachEventIndexedWithEV0(); // Teach event without an EV.
+  testTeachEventIndexedWithoutEV();
   testLearnEventIndexedDelete(); // Delete an event slot.
   testEventHashCollisionAndUnlearn(); // tests event lookup in Configuration::findExistingEvent()
   testUpdateProducedEventNNEN();
