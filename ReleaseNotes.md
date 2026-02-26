@@ -4,6 +4,8 @@ Releases are listed on GitHub: https://github.com/SvenRosvall/VLCB-Arduino/relea
 
 # Current development - pending release
 
+# 2.2.0 - Split EventTeachingService
+
 Provide service data.
 
 Split EventTeachingService into classic teaching and event index (slot) teaching.
