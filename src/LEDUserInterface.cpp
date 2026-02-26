@@ -33,7 +33,7 @@ void LEDUserInterface::process(const Action *action)
 
   if (resetRequested())
   {
-    //DEBUG_SERIAL << F("> Button is pressed for mode change") << endl;
+    // Serial << F("> Button is pressed for mode change") << endl;
     indicateMode(MODE_SETUP);
   }
   
@@ -52,11 +52,25 @@ void LEDUserInterface::handleAction(const Action *action)
   switch (action->actionType)
   {
     case ACT_INDICATE_ACTIVITY:
-      greenLed.pulse(PULSE_ACTIVITY);
+      if (controller->getModuleConfig()->currentMode == MODE_UNINITIALISED)
+      {
+        yellowLed.pulse(PULSE_ACTIVITY);
+      }
+      else
+      {
+        greenLed.pulse(PULSE_ACTIVITY);
+      }
       break;
       
     case ACT_INDICATE_WORK:
-      greenLed.pulse(PULSE_WORK);
+      if (controller->getModuleConfig()->currentMode == MODE_UNINITIALISED)
+      {
+        yellowLed.pulse(PULSE_WORK);
+      }
+      else
+      {
+        greenLed.pulse(PULSE_WORK);
+      }
       break;
 
     case ACT_INDICATE_MODE:
