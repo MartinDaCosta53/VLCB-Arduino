@@ -85,6 +85,10 @@ events in slots 20-29 activate LED 2, etc.
 ## [VLCB_long_message_example](../examples/VLCB_long_message_example/VLCB_long_message_example.ino)
 This is an example sketch that makes use of long messages.
 
+Unfortunately long messages in this library have not been
+tested properly and follow the RFC0005 draft rather than
+the VLCB Long Messages Service specification.
+
 ## [VLCB_SerialGC_1in1out](../examples/VLCB_SerialGC_1in1out/VLCB_SerialGC_1in1out.ino)
 This example sketch has the same functionality as [VLCB_1in1out](Examples.md#vlcb_1in1out) above
 but uses a serial connection instead of CAN bus.
