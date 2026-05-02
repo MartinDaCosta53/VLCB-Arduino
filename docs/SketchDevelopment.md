@@ -11,15 +11,17 @@ These steps are described below.
 
 ## Decide on Node Variable and Event Variable structure
 It is important to identify what node variables and event variables
-will be needed by the module as it is difficult to change these in later 
-versions of the module code.
+will be needed by the module as it might be difficult to change these in later 
+versions of the module code.  Changing them later will certainly result in the
+need to clear old nodes and event entries before update.
 
 Node variables are used to define module behaviours such as timing and threshold
 parameters.
 There can be node variables that define behaviour of individual I/O pins.
 
 Event variables are used to define what to do when a consumed event is
-received. 
+received. This may be to control an output device, such as an LED or servo,
+or to cause the module to perform some other action.
 Event variables are also used for produced events to control how and when
 these events are produced.
 
@@ -38,7 +40,7 @@ The example sketch "4in4out" uses classic events.
 Its event variable strategy is described below.
 
 Produced events are sent out when an input pin changes state.
-One event variable is deciding which input pin causes this event to be produced.
+One event variable defines which input pin causes this event to be produced.
 
 Consumed events are used to sent output pins such as LEDs. 
 There is one event variable for each LED. 
@@ -68,7 +70,7 @@ There is only one event variable here to say if the LED shall be turned on or bl
 A produced event can be "self consumed" if the same event appears in a
 slot for changing an LED.
 
-The slot event strategy reqires a larger event table but less event variables.
+The slot event strategy reqires a larger event table but fewer event variables.
 Total memory consumption for the events table is very similar to classic
 events strategy.
 
@@ -85,7 +87,7 @@ Modules that are being developed or only used by a single person do not
 have to be defined in CBUSDEFS. 
 Instead, use the _Manufacturer ID_ 13 (MANU_DEV).
 This _Manufacturer ID_ is intended for local development and the 
-_Module ID_ only need to be unique on this local layout bus. 
+_Module ID_ only needs to be unique on this local layout bus. 
 
 The example sketches use _Manufacturer ID_ 13 (MANU_DEV).
 If you use any of these sketches as a base for your own developed module 
