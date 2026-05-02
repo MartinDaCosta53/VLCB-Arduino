@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['blearn_0',['bLearn',['../class_v_l_c_b_1_1_abstract_event_teaching_service.html#ace2db4c0ae0a235abecbc2757303d1e7',1,'VLCB::AbstractEventTeachingService']]]
+  ['action_5fqueue_5fsize_0',['ACTION_QUEUE_SIZE',['../namespace_v_l_c_b.html#a4d64847ece89bd3e3251bd85c551cb74',1,'VLCB']]]
 ];

@@ -97,17 +97,17 @@ $(function(){initNavTree('_v_l_c_b_8h.html','',''); });
 <code>#include &lt;Configuration.h&gt;</code><br />
 <code>#include &lt;Parameters.h&gt;</code><br />
 <code>#include &lt;<a class="el" href="vlcbdefs_8hpp_source.html">vlcbdefs.hpp</a>&gt;</code><br />
-<code>#include &lt;LEDUserInterface.h&gt;</code><br />
+<code>#include &lt;<a class="el" href="_l_e_d_user_interface_8h_source.html">LEDUserInterface.h</a>&gt;</code><br />
 <code>#include &lt;MinimumNodeServiceWithDiagnostics.h&gt;</code><br />
 <code>#include &lt;CanServiceWithDiagnostics.h&gt;</code><br />
-<code>#include &lt;NodeVariableService.h&gt;</code><br />
+<code>#include &lt;<a class="el" href="_node_variable_service_8h_source.html">NodeVariableService.h</a>&gt;</code><br />
 <code>#include &lt;EventConsumerServiceWithDiagnostics.h&gt;</code><br />
 <code>#include &lt;EventProducerServiceWithDiagnostics.h&gt;</code><br />
-<code>#include &lt;ConsumeOwnEventsService.h&gt;</code><br />
+<code>#include &lt;<a class="el" href="_consume_own_events_service_8h_source.html">ConsumeOwnEventsService.h</a>&gt;</code><br />
 <code>#include &lt;EventTeachingServiceWithDiagnostics.h&gt;</code><br />
-<code>#include &lt;EventSlotTeachingService.h&gt;</code><br />
+<code>#include &lt;<a class="el" href="_event_slot_teaching_service_8h_source.html">EventSlotTeachingService.h</a>&gt;</code><br />
 <code>#include &lt;LongMessageService.h&gt;</code><br />
-<code>#include &lt;SerialUserInterface.h&gt;</code><br />
+<code>#include &lt;<a class="el" href="_serial_user_interface_8h_source.html">SerialUserInterface.h</a>&gt;</code><br />
 </div>
 <p><a href="_v_l_c_b_8h_source.html">Go to the source code of this file.</a></p>
 <table class="memberdecls">
@@ -141,6 +141,7 @@ Functions</h2></td></tr>
 <tr class="memitem:a99d87e91bed12fc7d3ea0ff11883cfc4" id="r_a99d87e91bed12fc7d3ea0ff11883cfc4"><td class="memItemLeft">byte&#160;</td><td class="memItemRight"><a class="el" href="namespace_v_l_c_b.html#a99d87e91bed12fc7d3ea0ff11883cfc4">VLCB::readNV</a> (byte nv)</td></tr>
 <tr class="memitem:a12b1a419a8cf46ade3bb21af922ca4dc" id="r_a12b1a419a8cf46ade3bb21af922ca4dc"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="namespace_v_l_c_b.html#a12b1a419a8cf46ade3bb21af922ca4dc">VLCB::writeNV</a> (byte nv, byte val)</td></tr>
 <tr class="memitem:af4db790a620d538341751018e3fe7107" id="r_af4db790a620d538341751018e3fe7107"><td class="memItemLeft">byte&#160;</td><td class="memItemRight"><a class="el" href="namespace_v_l_c_b.html#af4db790a620d538341751018e3fe7107">VLCB::getEventEVval</a> (byte idx, byte evnum)</td></tr>
+<tr class="memdesc:af4db790a620d538341751018e3fe7107"><td class="mdescLeft">&#160;</td><td class="mdescRight">return an event variable (EV) value given the event table index and EV number  <br /></td></tr>
 <tr class="memitem:a181c2049914246ec446d8c1a96c5f97f" id="r_a181c2049914246ec446d8c1a96c5f97f"><td class="memItemLeft">byte&#160;</td><td class="memItemRight"><a class="el" href="namespace_v_l_c_b.html#a181c2049914246ec446d8c1a96c5f97f">VLCB::findExistingEventByEv</a> (int evIndex, byte value)</td></tr>
 <tr class="memitem:a85d73e1518f3ad0d8333d8f446332e62" id="r_a85d73e1518f3ad0d8333d8f446332e62"><td class="memItemLeft">byte&#160;</td><td class="memItemRight"><a class="el" href="namespace_v_l_c_b.html#a85d73e1518f3ad0d8333d8f446332e62">VLCB::findExistingEvent</a> (unsigned int nn, unsigned int en)</td></tr>
 <tr class="memitem:aac4641296c4560e3b893be1e7e697927" id="r_aac4641296c4560e3b893be1e7e697927"><td class="memItemLeft">bool&#160;</td><td class="memItemRight"><a class="el" href="namespace_v_l_c_b.html#aac4641296c4560e3b893be1e7e697927">VLCB::isEventIndexValid</a> (byte eventIndex)</td></tr>
@@ -155,6 +156,7 @@ Functions</h2></td></tr>
 <tr class="memitem:aaeb4f2fe470df89ec5f39d240f8dde74" id="r_aaeb4f2fe470df89ec5f39d240f8dde74"><td class="memItemLeft">bool&#160;</td><td class="memItemRight"><a class="el" href="namespace_v_l_c_b.html#aaeb4f2fe470df89ec5f39d240f8dde74">VLCB::sendMessageWithNN</a> (<a class="el" href="vlcbdefs_8hpp.html#ab0a99f2600a899ad3f05834d22c3c2d5">VlcbOpCodes</a> opc, byte b1, byte b2, byte b3, byte b4)</td></tr>
 <tr class="memitem:a138d4887d5fb24e5d4a4d2c3a0aa690e" id="r_a138d4887d5fb24e5d4a4d2c3a0aa690e"><td class="memItemLeft">bool&#160;</td><td class="memItemRight"><a class="el" href="namespace_v_l_c_b.html#a138d4887d5fb24e5d4a4d2c3a0aa690e">VLCB::sendMessageWithNN</a> (<a class="el" href="vlcbdefs_8hpp.html#ab0a99f2600a899ad3f05834d22c3c2d5">VlcbOpCodes</a> opc, byte b1, byte b2, byte b3, byte b4, byte b5)</td></tr>
 <tr class="memitem:a87f488c1538aee38c3b185c78ce33364" id="r_a87f488c1538aee38c3b185c78ce33364"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="namespace_v_l_c_b.html#a87f488c1538aee38c3b185c78ce33364">VLCB::resetModule</a> ()</td></tr>
+<tr class="memdesc:a87f488c1538aee38c3b185c78ce33364"><td class="mdescLeft">&#160;</td><td class="mdescRight">reset the module to factory defaults  <br /></td></tr>
 <tr id="func-members-3" class="groupHeader"><td colspan="2"><div class="groupHeader">Running</div></td></tr>
 <tr class="memitem:af217aaaec8431562509e9df92a3ca6f0" id="r_af217aaaec8431562509e9df92a3ca6f0"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="namespace_v_l_c_b.html#af217aaaec8431562509e9df92a3ca6f0">VLCB::process</a> ()</td></tr>
 </table>

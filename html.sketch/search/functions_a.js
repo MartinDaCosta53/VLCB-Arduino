@@ -1,5 +1,4 @@
 var searchData=
 [
-  ['writeeventvariable_0',['writeEventVariable',['../namespace_v_l_c_b.html#ace8ce073febd299dc9274b52bbb0e298',1,'VLCB']]],
-  ['writenv_1',['writeNV',['../namespace_v_l_c_b.html#a12b1a419a8cf46ade3bb21af922ca4dc',1,'VLCB']]]
+  ['makeheader_5fimpl_0',['makeHeader_impl',['../namespace_v_l_c_b.html#ad3e8b1808c88df04fd46c72eb4d91023',1,'VLCB']]]
 ];

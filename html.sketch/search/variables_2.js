@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['validatorfunc_0',['validatorFunc',['../class_v_l_c_b_1_1_abstract_event_teaching_service.html#abd49e88439f1c0de674daecfac46aa65',1,'VLCB::AbstractEventTeachingService']]]
+  ['default_5fpriority_0',['DEFAULT_PRIORITY',['../namespace_v_l_c_b.html#afb3a3bf8a92ea6efb05ec235889563a4',1,'VLCB']]]
 ];
