@@ -109,18 +109,6 @@ Classes</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-func-members" class="groupheader"><a id="func-members" name="func-members"></a>
 Functions</h2></td></tr>
-<tr class="memitem:a7bddd917da6ee3f6d80aa4d895b0cc8a" id="r_a7bddd917da6ee3f6d80aa4d895b0cc8a"><td class="memItemLeft">byte&#160;</td><td class="memItemRight"><a class="el" href="#a7bddd917da6ee3f6d80aa4d895b0cc8a">getCANID</a> (unsigned long header)</td></tr>
-<tr class="memdesc:a7bddd917da6ee3f6d80aa4d895b0cc8a"><td class="mdescLeft">&#160;</td><td class="mdescRight">extract CANID from CAN frame header  <br /></td></tr>
-<tr class="memitem:ad3e8b1808c88df04fd46c72eb4d91023" id="r_ad3e8b1808c88df04fd46c72eb4d91023"><td class="memItemLeft">uint32_t&#160;</td><td class="memItemRight"><a class="el" href="#ad3e8b1808c88df04fd46c72eb4d91023">makeHeader_impl</a> (byte id, byte priority)</td></tr>
-<tr class="memitem:a3ed065bff3c7384809864e30815e3382" id="r_a3ed065bff3c7384809864e30815e3382"><td class="memItemLeft">Storage *&#160;</td><td class="memItemRight"><a class="el" href="#a3ed065bff3c7384809864e30815e3382">createDefaultStorageForPlatform</a> ()</td></tr>
-<tr class="memitem:af76dc435d869bbcc030438dbed7534cd" id="r_af76dc435d869bbcc030438dbed7534cd"><td class="memItemLeft">bool&#160;</td><td class="memItemRight"><a class="el" href="#af76dc435d869bbcc030438dbed7534cd">encodeGridConnect</a> (char *gcBuffer, CANFrame *frame)</td></tr>
-<tr class="memitem:a784ae7a958e6b6713644ea18c868beae" id="r_a784ae7a958e6b6713644ea18c868beae"><td class="memItemLeft">int&#160;</td><td class="memItemRight"><a class="el" href="#a784ae7a958e6b6713644ea18c868beae">ascii_pair_to_byte</a> (const char *pair)</td></tr>
-<tr class="memitem:a54d58027c303a44c1b359cce0ce5fef9" id="r_a54d58027c303a44c1b359cce0ce5fef9"><td class="memItemLeft">bool&#160;</td><td class="memItemRight"><a class="el" href="#a54d58027c303a44c1b359cce0ce5fef9">checkHexChars</a> (const char *charBuff, int count)</td></tr>
-<tr class="memitem:aa73d05b50147157bec4b527399c5c32d" id="r_aa73d05b50147157bec4b527399c5c32d"><td class="memItemLeft">bool&#160;</td><td class="memItemRight"><a class="el" href="#aa73d05b50147157bec4b527399c5c32d">decodeGridConnect</a> (const char *gcBuffer, CANFrame *frame)</td></tr>
-<tr class="memitem:addfc4389c52d850e868ac87659f30bc2" id="r_addfc4389c52d850e868ac87659f30bc2"><td class="memItemLeft">uint16_t&#160;</td><td class="memItemRight"><a class="el" href="#addfc4389c52d850e868ac87659f30bc2">crc16</a> (uint8_t *data_p, uint16_t length)</td></tr>
-<tr class="memitem:a4c989f05136813e36b0df589585f4a85" id="r_a4c989f05136813e36b0df589585f4a85"><td class="memItemLeft">uint32_t&#160;</td><td class="memItemRight"><a class="el" href="#a4c989f05136813e36b0df589585f4a85">crc32</a> (const char *s, size_t n)</td></tr>
-<tr class="memitem:a3dad0ad6597b990e46c9e7da6f420ddc" id="r_a3dad0ad6597b990e46c9e7da6f420ddc"><td class="memItemLeft">uint32_t&#160;</td><td class="memItemRight"><a class="el" href="#a3dad0ad6597b990e46c9e7da6f420ddc">crc32</a> (const byte *s, size_t n)</td></tr>
-<tr class="memitem:a4490cf14a3c0d62bcd4082b811ba5d3f" id="r_a4490cf14a3c0d62bcd4082b811ba5d3f"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a4490cf14a3c0d62bcd4082b811ba5d3f">copyName</a> (uint8_t *dest, const char *name)</td></tr>
 <tr id="func-members-0" class="groupHeader"><td colspan="2"><div class="groupHeader">Startup Functions</div></td></tr>
 <tr class="memitem:aca9610abdafcfe61167ac97a325bc858" id="r_aca9610abdafcfe61167ac97a325bc858"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#aca9610abdafcfe61167ac97a325bc858">checkStartupAction</a> (byte greenLedPin, byte yellowLedPin, byte pushButtonPin)</td></tr>
 <tr class="memitem:a9b7733390999c3dfd8e922f7397a3cc2" id="r_a9b7733390999c3dfd8e922f7397a3cc2"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a9b7733390999c3dfd8e922f7397a3cc2">begin</a> ()</td></tr>
@@ -145,7 +133,6 @@ Functions</h2></td></tr>
 <tr class="memitem:a99d87e91bed12fc7d3ea0ff11883cfc4" id="r_a99d87e91bed12fc7d3ea0ff11883cfc4"><td class="memItemLeft">byte&#160;</td><td class="memItemRight"><a class="el" href="#a99d87e91bed12fc7d3ea0ff11883cfc4">readNV</a> (byte nv)</td></tr>
 <tr class="memitem:a12b1a419a8cf46ade3bb21af922ca4dc" id="r_a12b1a419a8cf46ade3bb21af922ca4dc"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a12b1a419a8cf46ade3bb21af922ca4dc">writeNV</a> (byte nv, byte val)</td></tr>
 <tr class="memitem:af4db790a620d538341751018e3fe7107" id="r_af4db790a620d538341751018e3fe7107"><td class="memItemLeft">byte&#160;</td><td class="memItemRight"><a class="el" href="#af4db790a620d538341751018e3fe7107">getEventEVval</a> (byte idx, byte evnum)</td></tr>
-<tr class="memdesc:af4db790a620d538341751018e3fe7107"><td class="mdescLeft">&#160;</td><td class="mdescRight">return an event variable (EV) value given the event table index and EV number  <br /></td></tr>
 <tr class="memitem:a181c2049914246ec446d8c1a96c5f97f" id="r_a181c2049914246ec446d8c1a96c5f97f"><td class="memItemLeft">byte&#160;</td><td class="memItemRight"><a class="el" href="#a181c2049914246ec446d8c1a96c5f97f">findExistingEventByEv</a> (int evIndex, byte value)</td></tr>
 <tr class="memitem:a85d73e1518f3ad0d8333d8f446332e62" id="r_a85d73e1518f3ad0d8333d8f446332e62"><td class="memItemLeft">byte&#160;</td><td class="memItemRight"><a class="el" href="#a85d73e1518f3ad0d8333d8f446332e62">findExistingEvent</a> (unsigned int nn, unsigned int en)</td></tr>
 <tr class="memitem:aac4641296c4560e3b893be1e7e697927" id="r_aac4641296c4560e3b893be1e7e697927"><td class="memItemLeft">bool&#160;</td><td class="memItemRight"><a class="el" href="#aac4641296c4560e3b893be1e7e697927">isEventIndexValid</a> (byte eventIndex)</td></tr>
@@ -160,18 +147,8 @@ Functions</h2></td></tr>
 <tr class="memitem:aaeb4f2fe470df89ec5f39d240f8dde74" id="r_aaeb4f2fe470df89ec5f39d240f8dde74"><td class="memItemLeft">bool&#160;</td><td class="memItemRight"><a class="el" href="#aaeb4f2fe470df89ec5f39d240f8dde74">sendMessageWithNN</a> (<a class="el" href="vlcbdefs_8hpp.html#ab0a99f2600a899ad3f05834d22c3c2d5">VlcbOpCodes</a> opc, byte b1, byte b2, byte b3, byte b4)</td></tr>
 <tr class="memitem:a138d4887d5fb24e5d4a4d2c3a0aa690e" id="r_a138d4887d5fb24e5d4a4d2c3a0aa690e"><td class="memItemLeft">bool&#160;</td><td class="memItemRight"><a class="el" href="#a138d4887d5fb24e5d4a4d2c3a0aa690e">sendMessageWithNN</a> (<a class="el" href="vlcbdefs_8hpp.html#ab0a99f2600a899ad3f05834d22c3c2d5">VlcbOpCodes</a> opc, byte b1, byte b2, byte b3, byte b4, byte b5)</td></tr>
 <tr class="memitem:a87f488c1538aee38c3b185c78ce33364" id="r_a87f488c1538aee38c3b185c78ce33364"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a87f488c1538aee38c3b185c78ce33364">resetModule</a> ()</td></tr>
-<tr class="memdesc:a87f488c1538aee38c3b185c78ce33364"><td class="mdescLeft">&#160;</td><td class="mdescRight">reset the module to factory defaults  <br /></td></tr>
 <tr id="func-members-3" class="groupHeader"><td colspan="2"><div class="groupHeader">Running</div></td></tr>
 <tr class="memitem:af217aaaec8431562509e9df92a3ca6f0" id="r_af217aaaec8431562509e9df92a3ca6f0"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#af217aaaec8431562509e9df92a3ca6f0">process</a> ()</td></tr>
-</table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 id="header-var-members" class="groupheader"><a id="var-members" name="var-members"></a>
-Variables</h2></td></tr>
-<tr class="memitem:afb3a3bf8a92ea6efb05ec235889563a4" id="r_afb3a3bf8a92ea6efb05ec235889563a4"><td class="memItemLeft">const int&#160;</td><td class="memItemRight"><a class="el" href="#afb3a3bf8a92ea6efb05ec235889563a4">DEFAULT_PRIORITY</a> = 0xB</td></tr>
-<tr class="memitem:acf202752dda93b91376dda17ff42d455" id="r_acf202752dda93b91376dda17ff42d455"><td class="memItemLeft">void(*&#160;</td><td class="memItemRight"><a class="el" href="#acf202752dda93b91376dda17ff42d455">rebootFunc</a> )()=0</td></tr>
-<tr class="memitem:a4d64847ece89bd3e3251bd85c551cb74" id="r_a4d64847ece89bd3e3251bd85c551cb74"><td class="memItemLeft">const int&#160;</td><td class="memItemRight"><a class="el" href="#a4d64847ece89bd3e3251bd85c551cb74">ACTION_QUEUE_SIZE</a> = 30</td></tr>
-<tr class="memitem:aad1eb00af604a0112abad3154bbd96ff" id="r_aad1eb00af604a0112abad3154bbd96ff"><td class="memItemLeft">const int&#160;</td><td class="memItemRight"><a class="el" href="#aad1eb00af604a0112abad3154bbd96ff">PULSE_ACTIVITY</a> = 20</td></tr>
-<tr class="memitem:aed466e98970079bcfcf34cfc60aa8950" id="r_aed466e98970079bcfcf34cfc60aa8950"><td class="memItemLeft">const int&#160;</td><td class="memItemRight"><a class="el" href="#aed466e98970079bcfcf34cfc60aa8950">PULSE_WORK</a> = 250</td></tr>
-<tr class="memitem:a1de0a778bf3953dd247aafa01b99a828" id="r_a1de0a778bf3953dd247aafa01b99a828"><td class="memItemLeft">const unsigned int&#160;</td><td class="memItemRight"><a class="el" href="#a1de0a778bf3953dd247aafa01b99a828">SW_TR_HOLD</a> = 4000U</td></tr>
 </table>
 <a name="details" id="details"></a><h2 id="header-details" class="groupheader">Detailed Description</h2>
 <div class="textblock"><h1 class="doxsection"><a class="anchor" id="autotoc_md0"></a>
@@ -182,9 +159,7 @@ VLCB API</h1>
 <p>The example sketches are using the <a class="el" href="namespace_v_l_c_b.html">VLCB</a> function style.</p>
 <h2 class="doxsection"><a class="anchor" id="autotoc_md1"></a>
 VLCB functions</h2>
-<p>These functions are in the <a class="el" href="namespace_v_l_c_b.html">VLCB</a> namespace to avoid name clashes with other libraries. Prefix each call with <span class="tt"><a class="el" href="namespace_v_l_c_b.html">VLCB</a>::</span> or add a <span class="tt">using namespace <a class="el" href="namespace_v_l_c_b.html">VLCB</a>;</span> directive at the top of your code file.</p>
-<p>construct a Controller object with an external Configuration object named "config" that is defined in user code</p>
-<p>Implementation of Controller Long Message Support RFC 0005 by Dave McCabe (M4933) Developed by Duncan Greenwood (M5767) </p>
+<p>These functions are in the <a class="el" href="namespace_v_l_c_b.html">VLCB</a> namespace to avoid name clashes with other libraries. Prefix each call with <span class="tt"><a class="el" href="namespace_v_l_c_b.html">VLCB</a>::</span> or add a <span class="tt">using namespace <a class="el" href="namespace_v_l_c_b.html">VLCB</a>;</span> directive at the top of your code file. </p>
 </div><a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">Function Documentation</h2>
 <a id="aca9610abdafcfe61167ac97a325bc858" name="aca9610abdafcfe61167ac97a325bc858"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#aca9610abdafcfe61167ac97a325bc858">&#9670;&#160;</a></span>checkStartupAction()</h2>
@@ -248,7 +223,7 @@ VLCB functions</h2>
       </table>
 </div><div class="memdoc">
 <p>Set up the services to be used by the module. These services must be defined above in the code, outside any functions. The used services shall be listed with curly brackets, called an "initializer list". A call will look like this: </p><div class="fragment"><div class="line"><a class="code hl_function" href="#a0046980bf309ea157503c4f2a0970855">setServices</a>( { service1, service2, ... } );</div>
-<div class="ttc" id="anamespace_v_l_c_b_html_a0046980bf309ea157503c4f2a0970855"><div class="ttname"><a href="#a0046980bf309ea157503c4f2a0970855">VLCB::setServices</a></div><div class="ttdeci">void setServices(std::initializer_list&lt; Service * &gt; services)</div><div class="ttdef"><b>Definition</b> VLCB.cpp:31</div></div>
+<div class="ttc" id="anamespace_v_l_c_b_html_a0046980bf309ea157503c4f2a0970855"><div class="ttname"><a href="#a0046980bf309ea157503c4f2a0970855">VLCB::setServices</a></div><div class="ttdeci">void setServices(std::initializer_list&lt; Service * &gt; services)</div></div>
 </div><!-- fragment --> 
 </div>
 </div>
@@ -417,7 +392,7 @@ VLCB functions</h2>
 </div>
 </div>
 <a id="afdbd716415513eecc98597480bd85daa" name="afdbd716415513eecc98597480bd85daa"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#afdbd716415513eecc98597480bd85daa">&#9670;&#160;</a></span>getCANID() <span class="overload">[1/2]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#afdbd716415513eecc98597480bd85daa">&#9670;&#160;</a></span>getCANID()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -476,12 +451,11 @@ VLCB functions</h2>
         <tr>
           <td class="memname">byte VLCB::readNV </td>
           <td>(</td>
-          <td class="paramtype">byte</td>          <td class="paramname"><span class="paramname"><em>idx</em></span></td><td>)</td>
+          <td class="paramtype">byte</td>          <td class="paramname"><span class="paramname"><em>nv</em></span></td><td>)</td>
           <td></td>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>read an NV value from EEPROM note that NVs number from 1, not 0 </p>
 
 </div>
 </div>
@@ -494,7 +468,7 @@ VLCB functions</h2>
         <tr>
           <td class="memname">void VLCB::writeNV </td>
           <td>(</td>
-          <td class="paramtype">byte</td>          <td class="paramname"><span class="paramname"><em>idx</em></span>, </td>
+          <td class="paramtype">byte</td>          <td class="paramname"><span class="paramname"><em>nv</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -503,7 +477,6 @@ VLCB functions</h2>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>write an NV value to EEPROM note that NVs number from 1, not 0 </p>
 
 </div>
 </div>
@@ -525,8 +498,6 @@ VLCB functions</h2>
         </tr>
       </table>
 </div><div class="memdoc">
-
-<p>return an event variable (EV) value given the event table index and EV number </p>
 
 </div>
 </div>
@@ -862,8 +833,6 @@ VLCB functions</h2>
       </table>
 </div><div class="memdoc">
 
-<p>reset the module to factory defaults </p>
-
 </div>
 </div>
 <a id="af217aaaec8431562509e9df92a3ca6f0" name="af217aaaec8431562509e9df92a3ca6f0"></a>
@@ -881,332 +850,6 @@ VLCB functions</h2>
       </table>
 </div><div class="memdoc">
 <p>Call this in the <span class="tt">loop()</span>function. It lets the <a class="el" href="namespace_v_l_c_b.html">VLCB</a> library core execute its tasks such as check for new incoming messages and run queued tasks. </p>
-
-</div>
-</div>
-<a id="a7bddd917da6ee3f6d80aa4d895b0cc8a" name="a7bddd917da6ee3f6d80aa4d895b0cc8a"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a7bddd917da6ee3f6d80aa4d895b0cc8a">&#9670;&#160;</a></span>getCANID() <span class="overload">[2/2]</span></h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">byte VLCB::getCANID </td>
-          <td>(</td>
-          <td class="paramtype">unsigned long</td>          <td class="paramname"><span class="paramname"><em>header</em></span></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>extract CANID from CAN frame header </p>
-
-</div>
-</div>
-<a id="ad3e8b1808c88df04fd46c72eb4d91023" name="ad3e8b1808c88df04fd46c72eb4d91023"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ad3e8b1808c88df04fd46c72eb4d91023">&#9670;&#160;</a></span>makeHeader_impl()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">uint32_t VLCB::makeHeader_impl </td>
-          <td>(</td>
-          <td class="paramtype">byte</td>          <td class="paramname"><span class="paramname"><em>id</em></span>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">byte</td>          <td class="paramname"><span class="paramname"><em>priority</em></span>&#160;)</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-<p>actual implementation of the makeHeader method so it can be called directly or as a Controller class method the 11 bit ID of a standard CAN frame is comprised of: (4 bits of CAN priority) + (7 bits of CAN ID) priority = 1011 (0xB hex, 11 dec) as default argument, which translates to medium/low </p>
-
-</div>
-</div>
-<a id="a3ed065bff3c7384809864e30815e3382" name="a3ed065bff3c7384809864e30815e3382"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a3ed065bff3c7384809864e30815e3382">&#9670;&#160;</a></span>createDefaultStorageForPlatform()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">Storage * VLCB::createDefaultStorageForPlatform </td>
-          <td>(</td>
-          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a id="af76dc435d869bbcc030438dbed7534cd" name="af76dc435d869bbcc030438dbed7534cd"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#af76dc435d869bbcc030438dbed7534cd">&#9670;&#160;</a></span>encodeGridConnect()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">bool VLCB::encodeGridConnect </td>
-          <td>(</td>
-          <td class="paramtype">char *</td>          <td class="paramname"><span class="paramname"><em>gcBuffer</em></span>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">CANFrame *</td>          <td class="paramname"><span class="paramname"><em>frame</em></span>&#160;)</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a id="a784ae7a958e6b6713644ea18c868beae" name="a784ae7a958e6b6713644ea18c868beae"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a784ae7a958e6b6713644ea18c868beae">&#9670;&#160;</a></span>ascii_pair_to_byte()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">int VLCB::ascii_pair_to_byte </td>
-          <td>(</td>
-          <td class="paramtype">const char *</td>          <td class="paramname"><span class="paramname"><em>pair</em></span></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a id="a54d58027c303a44c1b359cce0ce5fef9" name="a54d58027c303a44c1b359cce0ce5fef9"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a54d58027c303a44c1b359cce0ce5fef9">&#9670;&#160;</a></span>checkHexChars()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">bool VLCB::checkHexChars </td>
-          <td>(</td>
-          <td class="paramtype">const char *</td>          <td class="paramname"><span class="paramname"><em>charBuff</em></span>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>count</em></span>&#160;)</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a id="aa73d05b50147157bec4b527399c5c32d" name="aa73d05b50147157bec4b527399c5c32d"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aa73d05b50147157bec4b527399c5c32d">&#9670;&#160;</a></span>decodeGridConnect()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">bool VLCB::decodeGridConnect </td>
-          <td>(</td>
-          <td class="paramtype">const char *</td>          <td class="paramname"><span class="paramname"><em>gcBuffer</em></span>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">CANFrame *</td>          <td class="paramname"><span class="paramname"><em>frame</em></span>&#160;)</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a id="addfc4389c52d850e868ac87659f30bc2" name="addfc4389c52d850e868ac87659f30bc2"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#addfc4389c52d850e868ac87659f30bc2">&#9670;&#160;</a></span>crc16()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">uint16_t VLCB::crc16 </td>
-          <td>(</td>
-          <td class="paramtype">uint8_t *</td>          <td class="paramname"><span class="paramname"><em>data_p</em></span>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">uint16_t</td>          <td class="paramname"><span class="paramname"><em>length</em></span>&#160;)</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a id="a4c989f05136813e36b0df589585f4a85" name="a4c989f05136813e36b0df589585f4a85"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a4c989f05136813e36b0df589585f4a85">&#9670;&#160;</a></span>crc32() <span class="overload">[1/2]</span></h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">uint32_t VLCB::crc32 </td>
-          <td>(</td>
-          <td class="paramtype">const char *</td>          <td class="paramname"><span class="paramname"><em>s</em></span>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">size_t</td>          <td class="paramname"><span class="paramname"><em>n</em></span>&#160;)</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a id="a3dad0ad6597b990e46c9e7da6f420ddc" name="a3dad0ad6597b990e46c9e7da6f420ddc"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a3dad0ad6597b990e46c9e7da6f420ddc">&#9670;&#160;</a></span>crc32() <span class="overload">[2/2]</span></h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">uint32_t VLCB::crc32 </td>
-          <td>(</td>
-          <td class="paramtype">const byte *</td>          <td class="paramname"><span class="paramname"><em>s</em></span>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">size_t</td>          <td class="paramname"><span class="paramname"><em>n</em></span>&#160;)</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a id="a4490cf14a3c0d62bcd4082b811ba5d3f" name="a4490cf14a3c0d62bcd4082b811ba5d3f"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a4490cf14a3c0d62bcd4082b811ba5d3f">&#9670;&#160;</a></span>copyName()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">void VLCB::copyName </td>
-          <td>(</td>
-          <td class="paramtype">uint8_t *</td>          <td class="paramname"><span class="paramname"><em>dest</em></span>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">const char *</td>          <td class="paramname"><span class="paramname"><em>name</em></span>&#160;)</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a name="doc-var-members" id="doc-var-members"></a><h2 id="header-doc-var-members" class="groupheader">Variable Documentation</h2>
-<a id="afb3a3bf8a92ea6efb05ec235889563a4" name="afb3a3bf8a92ea6efb05ec235889563a4"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#afb3a3bf8a92ea6efb05ec235889563a4">&#9670;&#160;</a></span>DEFAULT_PRIORITY</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">const int VLCB::DEFAULT_PRIORITY = 0xB</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a id="acf202752dda93b91376dda17ff42d455" name="acf202752dda93b91376dda17ff42d455"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#acf202752dda93b91376dda17ff42d455">&#9670;&#160;</a></span>rebootFunc</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">void(* VLCB::rebootFunc) ()=0 </td>
-          <td>(</td>
-          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a id="a4d64847ece89bd3e3251bd85c551cb74" name="a4d64847ece89bd3e3251bd85c551cb74"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a4d64847ece89bd3e3251bd85c551cb74">&#9670;&#160;</a></span>ACTION_QUEUE_SIZE</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">const int VLCB::ACTION_QUEUE_SIZE = 30</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a id="aad1eb00af604a0112abad3154bbd96ff" name="aad1eb00af604a0112abad3154bbd96ff"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aad1eb00af604a0112abad3154bbd96ff">&#9670;&#160;</a></span>PULSE_ACTIVITY</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">const int VLCB::PULSE_ACTIVITY = 20</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a id="aed466e98970079bcfcf34cfc60aa8950" name="aed466e98970079bcfcf34cfc60aa8950"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aed466e98970079bcfcf34cfc60aa8950">&#9670;&#160;</a></span>PULSE_WORK</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">const int VLCB::PULSE_WORK = 250</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a id="a1de0a778bf3953dd247aafa01b99a828" name="a1de0a778bf3953dd247aafa01b99a828"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a1de0a778bf3953dd247aafa01b99a828">&#9670;&#160;</a></span>SW_TR_HOLD</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">const unsigned int VLCB::SW_TR_HOLD = 4000U</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
 
 </div>
 </div>

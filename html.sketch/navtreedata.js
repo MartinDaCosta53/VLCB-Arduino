@@ -29,8 +29,7 @@ var NAVTREE =
       [ "Namespace List", "namespaces.html", "namespaces_dup" ],
       [ "Namespace Members", "namespacemembers.html", [
         [ "All", "namespacemembers.html", null ],
-        [ "Functions", "namespacemembers_func.html", null ],
-        [ "Variables", "namespacemembers_vars.html", null ]
+        [ "Functions", "namespacemembers_func.html", null ]
       ] ]
     ] ],
     [ "Classes", "annotated.html", [
@@ -47,7 +46,6 @@ var NAVTREE =
       [ "File List", "files.html", "files_dup" ],
       [ "File Members", "globals.html", [
         [ "All", "globals.html", "globals_dup" ],
-        [ "Functions", "globals_func.html", null ],
         [ "Enumerations", "globals_enum.html", null ],
         [ "Enumerator", "globals_eval.html", "globals_eval" ],
         [ "Macros", "globals_defs.html", null ]
@@ -58,9 +56,9 @@ var NAVTREE =
 
 var NAVTREEINDEX =
 [
-"_abstract_event_teaching_service_8cpp.html",
-"namespace_v_l_c_b.html#a54d58027c303a44c1b359cce0ce5fef9",
-"vlcbdefs_8hpp.html#a5e272d526f7b55ac73c4b6bec9b4e772af08f32d980f924680d483639343d1f00"
+"_abstract_event_teaching_service_8h.html",
+"vlcbdefs_8hpp.html#a1b13177ef0977f1f71d814fb32868268",
+"vlcbdefs_8hpp.html#aaab77f3b759f14b4e1346ce59c851feea21f8d4fddc1eceab66acbdd23cc313f2"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronization';

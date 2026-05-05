@@ -43,22 +43,5 @@ var namespace_v_l_c_b =
     [ "sendMessageWithNN", "namespace_v_l_c_b.html#aaeb4f2fe470df89ec5f39d240f8dde74", null ],
     [ "sendMessageWithNN", "namespace_v_l_c_b.html#a138d4887d5fb24e5d4a4d2c3a0aa690e", null ],
     [ "resetModule", "namespace_v_l_c_b.html#a87f488c1538aee38c3b185c78ce33364", null ],
-    [ "process", "namespace_v_l_c_b.html#af217aaaec8431562509e9df92a3ca6f0", null ],
-    [ "getCANID", "namespace_v_l_c_b.html#a7bddd917da6ee3f6d80aa4d895b0cc8a", null ],
-    [ "makeHeader_impl", "namespace_v_l_c_b.html#ad3e8b1808c88df04fd46c72eb4d91023", null ],
-    [ "createDefaultStorageForPlatform", "namespace_v_l_c_b.html#a3ed065bff3c7384809864e30815e3382", null ],
-    [ "encodeGridConnect", "namespace_v_l_c_b.html#af76dc435d869bbcc030438dbed7534cd", null ],
-    [ "ascii_pair_to_byte", "namespace_v_l_c_b.html#a784ae7a958e6b6713644ea18c868beae", null ],
-    [ "checkHexChars", "namespace_v_l_c_b.html#a54d58027c303a44c1b359cce0ce5fef9", null ],
-    [ "decodeGridConnect", "namespace_v_l_c_b.html#aa73d05b50147157bec4b527399c5c32d", null ],
-    [ "crc16", "namespace_v_l_c_b.html#addfc4389c52d850e868ac87659f30bc2", null ],
-    [ "crc32", "namespace_v_l_c_b.html#a4c989f05136813e36b0df589585f4a85", null ],
-    [ "crc32", "namespace_v_l_c_b.html#a3dad0ad6597b990e46c9e7da6f420ddc", null ],
-    [ "copyName", "namespace_v_l_c_b.html#a4490cf14a3c0d62bcd4082b811ba5d3f", null ],
-    [ "DEFAULT_PRIORITY", "namespace_v_l_c_b.html#afb3a3bf8a92ea6efb05ec235889563a4", null ],
-    [ "rebootFunc", "namespace_v_l_c_b.html#acf202752dda93b91376dda17ff42d455", null ],
-    [ "ACTION_QUEUE_SIZE", "namespace_v_l_c_b.html#a4d64847ece89bd3e3251bd85c551cb74", null ],
-    [ "PULSE_ACTIVITY", "namespace_v_l_c_b.html#aad1eb00af604a0112abad3154bbd96ff", null ],
-    [ "PULSE_WORK", "namespace_v_l_c_b.html#aed466e98970079bcfcf34cfc60aa8950", null ],
-    [ "SW_TR_HOLD", "namespace_v_l_c_b.html#a1de0a778bf3953dd247aafa01b99a828", null ]
+    [ "process", "namespace_v_l_c_b.html#af217aaaec8431562509e9df92a3ca6f0", null ]
 ];
