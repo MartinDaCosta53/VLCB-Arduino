@@ -10,6 +10,9 @@
 namespace VLCB
 {
 
+// Controller push button hold time for SLiM/FLiM transition in millis = 4 seconds
+const unsigned int SW_TR_HOLD = 4000U;
+
 // These intervals are defined in VLCB Technical Introduction chapter 6 - Module User Interface
 const int PULSE_ACTIVITY = 20;
 const int PULSE_WORK = 250;
