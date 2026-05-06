@@ -9,7 +9,7 @@
 
 namespace VLCB
 {
-/// # Event Teaching Service API
+/// @brief Event Teaching Service
 ///
 /// This service allows an Events Table to be created and managed using
 /// the MMC or similar. A full description of events can be found in
@@ -22,7 +22,7 @@ namespace VLCB
 ///
 class EventTeachingService : public AbstractEventTeachingService
 {
-/// \cond LIBRARY
+/// @cond LIBRARY
 public:
   virtual void process(const Action * action) override;
   virtual VlcbServiceTypes getServiceID() const override { return SERVICE_ID_OLD_TEACH; }
@@ -32,7 +32,7 @@ private:
   void handleMessage(const VlcbMessage *msg);
   void handleRequestEventVariable(const VlcbMessage *msg, unsigned int nn, unsigned int en);
   void handleLearnEvent(const VlcbMessage *msg, unsigned int nn, unsigned int en);
-/// \endcond
+/// @endcond
 };
 
 }  // VLCB

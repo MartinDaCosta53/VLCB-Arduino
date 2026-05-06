@@ -25,7 +25,7 @@ var searchData=
   ['err_5fsession_5fnot_5fpresent_22',['ERR_SESSION_NOT_PRESENT',['../vlcbdefs_8hpp.html#af6463b79fbdf36b8f3a940ea3326cc3ba19e1f342b5fa5415c03f467c7776dbad',1,'vlcbdefs.hpp']]],
   ['errorstatus_23',['errorStatus',['../class_v_l_c_b_1_1_c_a_n2515.html#af570cc148b6b66a963a7d6f535c844ce',1,'VLCB::CAN2515::errorStatus()'],['../class_v_l_c_b_1_1_serial_g_c.html#a520f04a9752997dbaf4d588c6adf1fff',1,'VLCB::SerialGC::errorStatus()'],['../class_v_l_c_b_1_1_transport.html#a666ff6c124b4ab55cdf1b9333a5ab2ee',1,'VLCB::Transport::errorStatus()']]],
   ['event_20consumer_20service_20api_24',['Event Consumer Service API',['../class_v_l_c_b_1_1_event_consumer_service.html#autotoc_md0',1,'']]],
-  ['event_20teaching_20service_20api_25',['Event Teaching Service API',['../class_v_l_c_b_1_1_event_teaching_service.html#autotoc_md2',1,'']]],
+  ['event_20producer_20service_20api_25',['Event Producer Service API',['../class_v_l_c_b_1_1_event_producer_service.html#autotoc_md1',1,'']]],
   ['event_5fack_5fbit_26',['EVENT_ACK_BIT',['../namespace_v_l_c_b.html#ac44748346f07fe846ee02d006a485600a1bc722dfbb08f83b97aff78b16dccada',1,'VLCB']]],
   ['eventack_27',['eventAck',['../class_v_l_c_b_1_1_configuration.html#ad145ae91115bb37aaa663ecdc4878d2f',1,'VLCB::Configuration']]],
   ['eventconsumerservice_28',['EventConsumerService',['../class_v_l_c_b_1_1_event_consumer_service.html',1,'VLCB']]],

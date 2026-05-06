@@ -12,7 +12,9 @@ namespace VLCB
 
 struct VlcbMessage;
 
+/// @brief Base class for teaching services
 /// 
+/// Provides common implementation for all teaching services.
 class AbstractEventTeachingService : public Service 
 {
 public:
@@ -20,7 +22,7 @@ public:
   /// comply with rules for this module.
   void setEventValidator(byte (*func)(int nn, int en, byte evNum, byte evVal)) { validatorFunc = func; }
 
-  /// \cond LIBRARY
+  /// @cond LIBRARY
   virtual Data getServiceData() override;
 
   void enableLearn();
@@ -33,7 +35,7 @@ protected:
 
   void handleMessage(const VlcbMessage *msg);
 
-  /// \endcond 
+  /// @endcond 
   
 private:
   void handleLearnMode(const VlcbMessage *msg, unsigned int nn);

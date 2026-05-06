@@ -9,7 +9,7 @@ var indexSectionsWithContent =
   6: "v",
   7: "abcegmopst",
   8: "_",
-  9: "acefpstv"
+  9: "acefpsv"
 };
 
 var indexSectionNames =

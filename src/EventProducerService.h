@@ -11,7 +11,10 @@
 namespace VLCB {
 
 struct VlcbMessage;
-/// # Producer Service API
+
+/// @brief Service for producing events.
+/// 
+/// # Event Producer Service API
 ///
 /// This service provides a means of generating VLCB events and
 /// interrogating their status. A full description of events can
@@ -24,7 +27,7 @@ public:
   /// Sets the callback function that is called when an Accessory Request
   /// opcode or Accessory Request Short Event opcode is received.
   void setRequestEventHandler(void (*fptr)(byte index, const VlcbMessage *msg));
-/// \cond LIBRARY
+/// @cond LIBRARY
   virtual void process(const Action * action) override;
 
   virtual VlcbServiceTypes getServiceID() const override
@@ -35,7 +38,7 @@ public:
   {
     return 1;
   }
-/// \endcond
+/// @endcond
 
   /// Causes an event to be sent with `state` indicating `on` for TRUE
   /// and `off` for FALSE. Short or Long event is determined by the
@@ -84,10 +87,10 @@ private:
   void handleProdSvcMessage(const VlcbMessage *msg);
 
   void sendMessage(VlcbMessage &msg, byte opCode, const byte *nn_en);
-/// \cond LIBRARY
+/// @cond LIBRARY
 protected:
   unsigned int diagEventsProduced = 0;
-/// \endcond
+/// @endcond
 };
 
 }  // VLCB

@@ -24,11 +24,7 @@ static const byte NUM_TX_BUFFS = 2;                         // default value
 static const uint32_t CANBITRATE = 125000UL;                // 125Kb/s - fixed for VLCB
 static const uint32_t OSCFREQ = 16000000UL;                 // crystal frequency default
 
-//
-/// an implementation of the Transport interface class
-/// to support the MCP2515/25625 CAN controllers
-//
-
+/// @brief Transport implementation for the MCP2515/25625 CAN controllers
 class CAN2515 : public CanTransport
 {
 public:

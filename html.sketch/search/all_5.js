@@ -10,7 +10,7 @@ var searchData=
   ['err_5fsession_5fcancelled_7',['ERR_SESSION_CANCELLED',['../vlcbdefs_8hpp.html#af6463b79fbdf36b8f3a940ea3326cc3baf0145303a055f2d381b24067e0113c1a',1,'vlcbdefs.hpp']]],
   ['err_5fsession_5fnot_5fpresent_8',['ERR_SESSION_NOT_PRESENT',['../vlcbdefs_8hpp.html#af6463b79fbdf36b8f3a940ea3326cc3ba19e1f342b5fa5415c03f467c7776dbad',1,'vlcbdefs.hpp']]],
   ['event_20consumer_20service_20api_9',['Event Consumer Service API',['../class_v_l_c_b_1_1_event_consumer_service.html#autotoc_md2',1,'']]],
-  ['event_20teaching_20service_20api_10',['Event Teaching Service API',['../class_v_l_c_b_1_1_event_teaching_service.html#autotoc_md4',1,'']]],
+  ['event_20producer_20service_20api_10',['Event Producer Service API',['../class_v_l_c_b_1_1_event_producer_service.html#autotoc_md3',1,'']]],
   ['eventconsumerservice_11',['EventConsumerService',['../class_v_l_c_b_1_1_event_consumer_service.html',1,'VLCB']]],
   ['eventconsumerservice_2eh_12',['EventConsumerService.h',['../_event_consumer_service_8h.html',1,'']]],
   ['eventproducerservice_13',['EventProducerService',['../class_v_l_c_b_1_1_event_producer_service.html',1,'VLCB']]],
