@@ -25,7 +25,7 @@ var annotated_dup =
       [ "EventProducerService", "class_v_l_c_b_1_1_event_producer_service.html", "class_v_l_c_b_1_1_event_producer_service" ],
       [ "EventProducerServiceWithDiagnostics", "class_v_l_c_b_1_1_event_producer_service_with_diagnostics.html", "class_v_l_c_b_1_1_event_producer_service_with_diagnostics" ],
       [ "EventSlotTeachingService", "class_v_l_c_b_1_1_event_slot_teaching_service.html", "class_v_l_c_b_1_1_event_slot_teaching_service" ],
-      [ "EventTeachingService", "class_v_l_c_b_1_1_event_teaching_service.html", null ],
+      [ "EventTeachingService", "class_v_l_c_b_1_1_event_teaching_service.html", "class_v_l_c_b_1_1_event_teaching_service" ],
       [ "EventTeachingServiceWithDiagnostics", "class_v_l_c_b_1_1_event_teaching_service_with_diagnostics.html", "class_v_l_c_b_1_1_event_teaching_service_with_diagnostics" ],
       [ "flash_page_t", "struct_v_l_c_b_1_1flash__page__t.html", "struct_v_l_c_b_1_1flash__page__t" ],
       [ "FlashStorage", "class_v_l_c_b_1_1_flash_storage.html", "class_v_l_c_b_1_1_flash_storage" ],
@@ -41,7 +41,7 @@ var annotated_dup =
       [ "Parameters", "class_v_l_c_b_1_1_parameters.html", "class_v_l_c_b_1_1_parameters" ],
       [ "SerialGC", "class_v_l_c_b_1_1_serial_g_c.html", "class_v_l_c_b_1_1_serial_g_c" ],
       [ "SerialUserInterface", "class_v_l_c_b_1_1_serial_user_interface.html", "class_v_l_c_b_1_1_serial_user_interface" ],
-      [ "Service", "class_v_l_c_b_1_1_service.html", null ],
+      [ "Service", "class_v_l_c_b_1_1_service.html", "class_v_l_c_b_1_1_service" ],
       [ "Storage", "class_v_l_c_b_1_1_storage.html", "class_v_l_c_b_1_1_storage" ],
       [ "Switch", "class_v_l_c_b_1_1_switch.html", "class_v_l_c_b_1_1_switch" ],
       [ "Transport", "class_v_l_c_b_1_1_transport.html", "class_v_l_c_b_1_1_transport" ]

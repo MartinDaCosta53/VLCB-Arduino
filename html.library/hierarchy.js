@@ -6,6 +6,7 @@ var hierarchy =
     [ "VLCB::CircularBuffer&lt; E &gt;", "class_v_l_c_b_1_1_circular_buffer.html", null ],
     [ "VLCB::Configuration", "class_v_l_c_b_1_1_configuration.html", null ],
     [ "VLCB::Controller", "class_v_l_c_b_1_1_controller.html", null ],
+    [ "VLCB::Service::Data", "struct_v_l_c_b_1_1_service_1_1_data.html", null ],
     [ "VLCB::flash_page_t", "struct_v_l_c_b_1_1flash__page__t.html", null ],
     [ "std::initializer_list&lt; E &gt;", "classstd_1_1initializer__list.html", null ],
     [ "VLCB::LED", "class_v_l_c_b_1_1_l_e_d.html", null ],
