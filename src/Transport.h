@@ -16,6 +16,8 @@ public:
 
   virtual unsigned int receiveCounter() = 0;
   virtual unsigned int transmitCounter() = 0;
+  virtual unsigned int receiveBufferSize() = 0;
+  virtual unsigned int transmitBufferSize() = 0;
   virtual unsigned int receiveErrorCounter() = 0;
   virtual unsigned int transmitErrorCounter() = 0;
   virtual unsigned int receiveBufferUsage() = 0;
