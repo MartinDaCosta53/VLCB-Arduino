@@ -13,13 +13,14 @@ namespace VLCB
 {
 
 struct VlcbMessage;
-
+/// @brief Service for sending and receiving messages on a CAN bus
 class CanService : public Service
 {
 
 public:
   CanService(CanTransport * tpt) : canTransport(tpt) {}
 
+  /// @cond LIBRARY
   virtual VlcbServiceTypes getServiceID() const override { return SERVICE_ID_CAN; }
   virtual byte getServiceVersionID() const override { return 2; }
   virtual Data getServiceData();
@@ -28,6 +29,7 @@ public:
 
 protected:
   CanTransport * canTransport;
+  /// @endcond 
 
 private:
   void handleCanServiceMessage(const VlcbMessage *msg);

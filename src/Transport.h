@@ -8,10 +8,11 @@
 namespace VLCB
 {
 
-// Interface for statistics on the transport layer.
+/// Interface for statistics on the transport layer.
 class Transport
 {
 public:
+  /// @cond LIBRARY
   virtual void reset() = 0;
 
   virtual unsigned int receiveCounter() = 0;
@@ -23,6 +24,7 @@ public:
   virtual unsigned int receiveBufferPeak() = 0;
   virtual unsigned int transmitBufferPeak() = 0;
   virtual unsigned int errorStatus() = 0;
+  /// @endcond 
 };
 
 }

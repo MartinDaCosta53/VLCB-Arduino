@@ -1,5 +1,11 @@
 var namespace_v_l_c_b =
 [
+    [ "LEDUserInterface", "class_v_l_c_b_1_1_l_e_d_user_interface.html", "class_v_l_c_b_1_1_l_e_d_user_interface" ],
+    [ "SerialUserInterface", "class_v_l_c_b_1_1_serial_user_interface.html", "class_v_l_c_b_1_1_serial_user_interface" ],
+    [ "CANFrame", "struct_v_l_c_b_1_1_c_a_n_frame.html", "struct_v_l_c_b_1_1_c_a_n_frame" ],
+    [ "CanTransport", "class_v_l_c_b_1_1_can_transport.html", null ],
+    [ "SerialGC", "class_v_l_c_b_1_1_serial_g_c.html", "class_v_l_c_b_1_1_serial_g_c" ],
+    [ "CAN2515", "class_v_l_c_b_1_1_c_a_n2515.html", "class_v_l_c_b_1_1_c_a_n2515" ],
     [ "AbstractEventTeachingService", "class_v_l_c_b_1_1_abstract_event_teaching_service.html", "class_v_l_c_b_1_1_abstract_event_teaching_service" ],
     [ "CanService", "class_v_l_c_b_1_1_can_service.html", "class_v_l_c_b_1_1_can_service" ],
     [ "ConsumeOwnEventsService", "class_v_l_c_b_1_1_consume_own_events_service.html", "class_v_l_c_b_1_1_consume_own_events_service" ],
@@ -10,8 +16,6 @@ var namespace_v_l_c_b =
     [ "MinimumNodeService", "class_v_l_c_b_1_1_minimum_node_service.html", "class_v_l_c_b_1_1_minimum_node_service" ],
     [ "NodeVariableService", "class_v_l_c_b_1_1_node_variable_service.html", "class_v_l_c_b_1_1_node_variable_service" ],
     [ "Service", "class_v_l_c_b_1_1_service.html", null ],
-    [ "LEDUserInterface", "class_v_l_c_b_1_1_l_e_d_user_interface.html", "class_v_l_c_b_1_1_l_e_d_user_interface" ],
-    [ "SerialUserInterface", "class_v_l_c_b_1_1_serial_user_interface.html", "class_v_l_c_b_1_1_serial_user_interface" ],
     [ "checkStartupAction", "namespace_v_l_c_b.html#aca9610abdafcfe61167ac97a325bc858", null ],
     [ "begin", "namespace_v_l_c_b.html#a9b7733390999c3dfd8e922f7397a3cc2", null ],
     [ "setServices", "namespace_v_l_c_b.html#a0046980bf309ea157503c4f2a0970855", null ],

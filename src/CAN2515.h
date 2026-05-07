@@ -31,6 +31,7 @@ public:
 
   CAN2515();
 
+  /// @cond LIBRARY
   // these methods are declared virtual in the base class and must be implemented by the derived class
 #ifdef ARDUINO_ARCH_RP2040
   bool begin(bool poll = false, SPIClassRP2040 & spi = SPI);    // note default args
@@ -66,7 +67,7 @@ public:
   virtual unsigned int errorStatus() override { return canp->errorFlagRegister(); }
 
   ACAN2515 *canp;   // pointer to CAN object so user code can access its members
-
+  /// @endcond
 private:
   unsigned int _numMsgsSent, _numMsgsRcvd;
   unsigned long _osc_freq;

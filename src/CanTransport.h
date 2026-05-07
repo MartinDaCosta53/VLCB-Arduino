@@ -20,15 +20,17 @@ struct CANFrame
   uint8_t data[8];
 };
 
-// Interface for CAN transports 
+/// Interface base class for CAN transports 
 class CanTransport : public Transport
 {
 public:
+  /// @cond LIBRARY
   virtual bool available() = 0;
   virtual CANFrame getNextCanFrame() = 0;
   virtual bool sendCanFrame(CANFrame *msg) = 0;
 
   virtual byte getHardwareType() { return 0; };
+  /// @endcond 
 };
 
 }
