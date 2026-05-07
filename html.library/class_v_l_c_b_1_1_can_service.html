@@ -133,6 +133,9 @@ Additional Inherited Members</h2></td></tr>
 </table>
 <a name="details" id="details"></a><h2 id="header-details" class="groupheader">Detailed Description</h2>
 <div class="textblock"><p><a class="el" href="class_v_l_c_b_1_1_service.html" title="Interface base class for all VLCB services.">Service</a> for sending and receiving messages on a CAN bus. </p>
+<p>Delegates to a <a class="el" href="class_v_l_c_b_1_1_can_transport.html" title="Interface base class for CAN transport implementations.">CanTransport</a> object to do the actual transmission on the CAN bus.</p>
+<p>The <a class="el" href="class_v_l_c_b_1_1_can_service.html" title="Service for sending and receiving messages on a CAN bus.">CanService</a> class manages the CANID which can be explicitly set or dynamically allocated via the CANID enumeration process.</p>
+<p>It also puts incoming <a class="el" href="struct_v_l_c_b_1_1_c_a_n_frame.html" title="Represents a CAN frame sent on the CAN bus.">CANFrame</a>'s on to the ActionQueue as a <a class="el" href="struct_v_l_c_b_1_1_vlcb_message.html" title="CAN/Controller message type.">VlcbMessage</a>, and gets outgoing <a class="el" href="struct_v_l_c_b_1_1_vlcb_message.html" title="CAN/Controller message type.">VlcbMessage</a> from the ActionQueue and passes it to the <a class="el" href="class_v_l_c_b_1_1_can_transport.html" title="Interface base class for CAN transport implementations.">CanTransport</a> object for transmission on the CAN bus. </p>
 </div><a name="doc-constructors" id="doc-constructors"></a><h2 id="header-doc-constructors" class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="a558d311e484d9d00476c2cf7ec4b3109" name="a558d311e484d9d00476c2cf7ec4b3109"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a558d311e484d9d00476c2cf7ec4b3109">&#9670;&#160;</a></span>CanService()</h2>
@@ -156,6 +159,7 @@ Additional Inherited Members</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+<p>Construct a <a class="el" href="class_v_l_c_b_1_1_can_service.html" title="Service for sending and receiving messages on a CAN bus.">CanService</a> with a concrete <a class="el" href="class_v_l_c_b_1_1_can_transport.html" title="Interface base class for CAN transport implementations.">CanTransport</a> object to use for transmission on the CAN bus. </p>
 
 </div>
 </div>

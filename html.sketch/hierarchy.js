@@ -1,6 +1,5 @@
 var hierarchy =
 [
-    [ "VLCB::CANFrame", "struct_v_l_c_b_1_1_c_a_n_frame.html", null ],
     [ "std::initializer_list&lt; E &gt;", "classstd_1_1initializer__list.html", null ],
     [ "VLCB::Service", "class_v_l_c_b_1_1_service.html", [
       [ "VLCB::AbstractEventTeachingService", "class_v_l_c_b_1_1_abstract_event_teaching_service.html", [

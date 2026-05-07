@@ -92,7 +92,7 @@ $(function(){initNavTree('class_v_l_c_b_1_1_serial_g_c.html','','class_v_l_c_b_1
 </div><!--header-->
 <div class="contents">
 
-<p>Implementation of the <a class="el" href="class_v_l_c_b_1_1_transport.html">Transport</a> interface class to support the gridconnect protocol over serial connection.  
+<p>Implementation of the <a class="el" href="class_v_l_c_b_1_1_transport.html" title="Interface for statistics on the transport layer.">Transport</a> interface class to support the gridconnect protocol over serial connection.  
  <a href="#details">More...</a></p>
 
 <p><code>#include &lt;<a class="el" href="_serial_g_c_8h_source.html">SerialGC.h</a>&gt;</code></p>
@@ -102,8 +102,8 @@ Inheritance diagram for VLCB::SerialGC:</div>
  <div class="center">
   <img src="class_v_l_c_b_1_1_serial_g_c.png" usemap="#VLCB_3A_3ASerialGC_map" alt=""/>
   <map id="VLCB_3A_3ASerialGC_map" name="VLCB_3A_3ASerialGC_map">
-<area href="class_v_l_c_b_1_1_can_transport.html" title="Interface base class for CAN transports." alt="VLCB::CanTransport" shape="rect" coords="0,56,128,80"/>
-<area href="class_v_l_c_b_1_1_transport.html" alt="VLCB::Transport" shape="rect" coords="0,0,128,24"/>
+<area href="class_v_l_c_b_1_1_can_transport.html" title="Interface base class for CAN transport implementations." alt="VLCB::CanTransport" shape="rect" coords="0,56,128,80"/>
+<area href="class_v_l_c_b_1_1_transport.html" title="Interface for statistics on the transport layer." alt="VLCB::Transport" shape="rect" coords="0,0,128,24"/>
   </map>
 </div></div>
 <table class="memberdecls">
@@ -112,6 +112,7 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a3d59b0921d41a00e8c7e0e936c51dc18" id="r_a3d59b0921d41a00e8c7e0e936c51dc18"><td class="memItemLeft">&#160;</td><td class="memItemRight"><a class="el" href="#a3d59b0921d41a00e8c7e0e936c51dc18">SerialGC</a> (typeof(Serial)&amp;_serial=Serial)</td></tr>
 <tr class="memitem:adc1371dddbffff1d32818e1cab7d1992" id="r_adc1371dddbffff1d32818e1cab7d1992"><td class="memItemLeft">bool&#160;</td><td class="memItemRight"><a class="el" href="#adc1371dddbffff1d32818e1cab7d1992">begin</a> ()</td></tr>
 <tr class="memitem:abcb6d3b33c62605c0eba3c1229ffe698" id="r_abcb6d3b33c62605c0eba3c1229ffe698"><td class="memItemLeft">virtual bool&#160;</td><td class="memItemRight"><a class="el" href="#abcb6d3b33c62605c0eba3c1229ffe698">available</a> () override</td></tr>
+<tr class="memdesc:abcb6d3b33c62605c0eba3c1229ffe698"><td class="mdescLeft">&#160;</td><td class="mdescRight">Check if an incoming CAN frame is available on the CAN bus.  <br /></td></tr>
 <tr class="memitem:a0f23096cd4b49a060ec0c8aa730a16c3" id="r_a0f23096cd4b49a060ec0c8aa730a16c3"><td class="memItemLeft">virtual <a class="el" href="struct_v_l_c_b_1_1_c_a_n_frame.html">CANFrame</a>&#160;</td><td class="memItemRight"><a class="el" href="#a0f23096cd4b49a060ec0c8aa730a16c3">getNextCanFrame</a> () override</td></tr>
 <tr class="memitem:ab48d503a675db46c658478a650be0ca0" id="r_ab48d503a675db46c658478a650be0ca0"><td class="memItemLeft">virtual bool&#160;</td><td class="memItemRight"><a class="el" href="#ab48d503a675db46c658478a650be0ca0">sendCanFrame</a> (<a class="el" href="struct_v_l_c_b_1_1_c_a_n_frame.html">CANFrame</a> *frame) override</td></tr>
 <tr class="memdesc:ab48d503a675db46c658478a650be0ca0"><td class="mdescLeft">&#160;</td><td class="mdescRight">send a CANMessage message in GridConnect format  <br /></td></tr>
@@ -129,7 +130,7 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a520f04a9752997dbaf4d588c6adf1fff" id="r_a520f04a9752997dbaf4d588c6adf1fff"><td class="memItemLeft">virtual unsigned int&#160;</td><td class="memItemRight"><a class="el" href="#a520f04a9752997dbaf4d588c6adf1fff">errorStatus</a> () override</td></tr>
 </table>
 <a name="details" id="details"></a><h2 id="header-details" class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>Implementation of the <a class="el" href="class_v_l_c_b_1_1_transport.html">Transport</a> interface class to support the gridconnect protocol over serial connection. </p>
+<div class="textblock"><p>Implementation of the <a class="el" href="class_v_l_c_b_1_1_transport.html" title="Interface for statistics on the transport layer.">Transport</a> interface class to support the gridconnect protocol over serial connection. </p>
 </div><a name="doc-constructors" id="doc-constructors"></a><h2 id="header-doc-constructors" class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="a3d59b0921d41a00e8c7e0e936c51dc18" name="a3d59b0921d41a00e8c7e0e936c51dc18"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a3d59b0921d41a00e8c7e0e936c51dc18">&#9670;&#160;</a></span>SerialGC()</h2>
@@ -196,6 +197,8 @@ Public Member Functions</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p>Check if an incoming CAN frame is available on the CAN bus. </p>
 
 <p>Implements <a class="el" href="class_v_l_c_b_1_1_can_transport.html#a3c4125017a96bf67bcea21cbb7df8be0">VLCB::CanTransport</a>.</p>
 
@@ -309,6 +312,7 @@ Public Member Functions</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+<p>Get the hardware type of the concrete transport class. </p>
 
 <p>Reimplemented from <a class="el" href="class_v_l_c_b_1_1_can_transport.html#a9a9e0924ba24fbbb9748ed5c70e75d82">VLCB::CanTransport</a>.</p>
 

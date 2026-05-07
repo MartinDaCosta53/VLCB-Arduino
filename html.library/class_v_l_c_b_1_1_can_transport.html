@@ -92,7 +92,7 @@ $(function(){initNavTree('class_v_l_c_b_1_1_can_transport.html','','class_v_l_c_
 </div><!--header-->
 <div class="contents">
 
-<p>Interface base class for CAN transports.  
+<p>Interface base class for CAN transport implementations.  
  <a href="#details">More...</a></p>
 
 <p><code>#include &lt;<a class="el" href="_can_transport_8h_source.html">CanTransport.h</a>&gt;</code></p>
@@ -102,7 +102,7 @@ Inheritance diagram for VLCB::CanTransport:</div>
  <div class="center">
   <img src="class_v_l_c_b_1_1_can_transport.png" usemap="#VLCB_3A_3ACanTransport_map" alt=""/>
   <map id="VLCB_3A_3ACanTransport_map" name="VLCB_3A_3ACanTransport_map">
-<area href="class_v_l_c_b_1_1_transport.html" alt="VLCB::Transport" shape="rect" coords="69,0,197,24"/>
+<area href="class_v_l_c_b_1_1_transport.html" title="Interface for statistics on the transport layer." alt="VLCB::Transport" shape="rect" coords="69,0,197,24"/>
 <area href="class_v_l_c_b_1_1_c_a_n2515.html" title="Transport implementation for the MCP2515/25625 CAN controllers." alt="VLCB::CAN2515" shape="rect" coords="0,112,128,136"/>
 <area href="class_v_l_c_b_1_1_serial_g_c.html" title="Implementation of the Transport interface class to support the gridconnect protocol over serial conne..." alt="VLCB::SerialGC" shape="rect" coords="138,112,266,136"/>
   </map>
@@ -111,8 +111,11 @@ Inheritance diagram for VLCB::CanTransport:</div>
 <tr class="heading"><td colspan="2"><h2 id="header-pub-methods" class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:a3c4125017a96bf67bcea21cbb7df8be0" id="r_a3c4125017a96bf67bcea21cbb7df8be0"><td class="memItemLeft">virtual bool&#160;</td><td class="memItemRight"><a class="el" href="#a3c4125017a96bf67bcea21cbb7df8be0">available</a> ()=0</td></tr>
+<tr class="memdesc:a3c4125017a96bf67bcea21cbb7df8be0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Check if an incoming CAN frame is available on the CAN bus.  <br /></td></tr>
 <tr class="memitem:aa8c65eb9cacb5f8053ca634c6993f401" id="r_aa8c65eb9cacb5f8053ca634c6993f401"><td class="memItemLeft">virtual <a class="el" href="struct_v_l_c_b_1_1_c_a_n_frame.html">CANFrame</a>&#160;</td><td class="memItemRight"><a class="el" href="#aa8c65eb9cacb5f8053ca634c6993f401">getNextCanFrame</a> ()=0</td></tr>
+<tr class="memdesc:aa8c65eb9cacb5f8053ca634c6993f401"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the next CAN frame from the CAN bus.  <br /></td></tr>
 <tr class="memitem:a8e82cca24b13f37179c1b1e7d6186d81" id="r_a8e82cca24b13f37179c1b1e7d6186d81"><td class="memItemLeft">virtual bool&#160;</td><td class="memItemRight"><a class="el" href="#a8e82cca24b13f37179c1b1e7d6186d81">sendCanFrame</a> (<a class="el" href="struct_v_l_c_b_1_1_c_a_n_frame.html">CANFrame</a> *msg)=0</td></tr>
+<tr class="memdesc:a8e82cca24b13f37179c1b1e7d6186d81"><td class="mdescLeft">&#160;</td><td class="mdescRight">Send a CAN frame to the CAN bus.  <br /></td></tr>
 <tr class="memitem:a9a9e0924ba24fbbb9748ed5c70e75d82" id="r_a9a9e0924ba24fbbb9748ed5c70e75d82"><td class="memItemLeft">virtual byte&#160;</td><td class="memItemRight"><a class="el" href="#a9a9e0924ba24fbbb9748ed5c70e75d82">getHardwareType</a> ()</td></tr>
 <tr class="inherit_header pub_methods_class_v_l_c_b_1_1_transport"><td colspan="2" onclick="javascript:dynsection.toggleInherit('pub_methods_class_v_l_c_b_1_1_transport')"><span class="dynarrow"><span class="arrowhead closed"></span></span>Public Member Functions inherited from <a class="el" href="class_v_l_c_b_1_1_transport.html">VLCB::Transport</a></td></tr>
 <tr class="memitem:aec481ae46f39ec45c34a187314f4293e inherit pub_methods_class_v_l_c_b_1_1_transport" id="r_aec481ae46f39ec45c34a187314f4293e"><td class="memItemLeft">virtual void&#160;</td><td class="memItemRight"><a class="el" href="class_v_l_c_b_1_1_transport.html#aec481ae46f39ec45c34a187314f4293e">reset</a> ()=0</td></tr>
@@ -127,7 +130,8 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a666ff6c124b4ab55cdf1b9333a5ab2ee inherit pub_methods_class_v_l_c_b_1_1_transport" id="r_a666ff6c124b4ab55cdf1b9333a5ab2ee"><td class="memItemLeft">virtual unsigned int&#160;</td><td class="memItemRight"><a class="el" href="class_v_l_c_b_1_1_transport.html#a666ff6c124b4ab55cdf1b9333a5ab2ee">errorStatus</a> ()=0</td></tr>
 </table>
 <a name="details" id="details"></a><h2 id="header-details" class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>Interface base class for CAN transports. </p>
+<div class="textblock"><p>Interface base class for CAN transport implementations. </p>
+<p>A concrete class derived from <a class="el" href="class_v_l_c_b_1_1_can_transport.html" title="Interface base class for CAN transport implementations.">CanTransport</a> must be used with <a class="el" href="class_v_l_c_b_1_1_can_service.html" title="Service for sending and receiving messages on a CAN bus.">CanService</a>. </p>
 </div><a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">Member Function Documentation</h2>
 <a id="a3c4125017a96bf67bcea21cbb7df8be0" name="a3c4125017a96bf67bcea21cbb7df8be0"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a3c4125017a96bf67bcea21cbb7df8be0">&#9670;&#160;</a></span>available()</h2>
@@ -151,6 +155,8 @@ Public Member Functions</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p>Check if an incoming CAN frame is available on the CAN bus. </p>
 
 <p>Implemented in <a class="el" href="class_v_l_c_b_1_1_c_a_n2515.html#ac72c7c31161381b64da83a2f2e3ab926">VLCB::CAN2515</a>, and <a class="el" href="class_v_l_c_b_1_1_serial_g_c.html#abcb6d3b33c62605c0eba3c1229ffe698">VLCB::SerialGC</a>.</p>
 
@@ -179,6 +185,8 @@ Public Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
+<p>Get the next CAN frame from the CAN bus. </p>
+
 <p>Implemented in <a class="el" href="class_v_l_c_b_1_1_c_a_n2515.html#aa812f850973f42adb7c3fdb7b56fc5ad">VLCB::CAN2515</a>, and <a class="el" href="class_v_l_c_b_1_1_serial_g_c.html#a0f23096cd4b49a060ec0c8aa730a16c3">VLCB::SerialGC</a>.</p>
 
 </div>
@@ -206,6 +214,8 @@ Public Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
+<p>Send a CAN frame to the CAN bus. </p>
+
 <p>Implemented in <a class="el" href="class_v_l_c_b_1_1_c_a_n2515.html#aff4cc3ae7f66d17f7664c1ea8786a707">VLCB::CAN2515</a>, and <a class="el" href="class_v_l_c_b_1_1_serial_g_c.html#ab48d503a675db46c658478a650be0ca0">VLCB::SerialGC</a>.</p>
 
 </div>
@@ -232,6 +242,7 @@ Public Member Functions</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+<p>Get the hardware type of the concrete transport class. </p>
 
 <p>Reimplemented in <a class="el" href="class_v_l_c_b_1_1_c_a_n2515.html#aa6ebcb9414b5ffe352ed698d0e92f2bc">VLCB::CAN2515</a>, and <a class="el" href="class_v_l_c_b_1_1_serial_g_c.html#a93e6ea06aaeb12be59336b7d0711b279">VLCB::SerialGC</a>.</p>
 
