@@ -5,7 +5,7 @@ var annotated_dup =
     ] ],
     [ "VLCB", "namespace_v_l_c_b.html", [
       [ "LEDUserInterface", "class_v_l_c_b_1_1_l_e_d_user_interface.html", "class_v_l_c_b_1_1_l_e_d_user_interface" ],
-      [ "SerialUserInterface", "class_v_l_c_b_1_1_serial_user_interface.html", "class_v_l_c_b_1_1_serial_user_interface" ],
+      [ "SerialUserInterface", "class_v_l_c_b_1_1_serial_user_interface.html", null ],
       [ "CanTransport", "class_v_l_c_b_1_1_can_transport.html", null ],
       [ "SerialGC", "class_v_l_c_b_1_1_serial_g_c.html", "class_v_l_c_b_1_1_serial_g_c" ],
       [ "CAN2515", "class_v_l_c_b_1_1_c_a_n2515.html", "class_v_l_c_b_1_1_c_a_n2515" ],
