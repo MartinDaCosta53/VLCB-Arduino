@@ -113,6 +113,8 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:aec481ae46f39ec45c34a187314f4293e" id="r_aec481ae46f39ec45c34a187314f4293e"><td class="memItemLeft">virtual void&#160;</td><td class="memItemRight"><a class="el" href="#aec481ae46f39ec45c34a187314f4293e">reset</a> ()=0</td></tr>
 <tr class="memitem:a82139fd2fd052a99781e4a4489d8a7ee" id="r_a82139fd2fd052a99781e4a4489d8a7ee"><td class="memItemLeft">virtual unsigned int&#160;</td><td class="memItemRight"><a class="el" href="#a82139fd2fd052a99781e4a4489d8a7ee">receiveCounter</a> ()=0</td></tr>
 <tr class="memitem:ac5b7f5d8d37aa11d5a814d1d6fb6b53f" id="r_ac5b7f5d8d37aa11d5a814d1d6fb6b53f"><td class="memItemLeft">virtual unsigned int&#160;</td><td class="memItemRight"><a class="el" href="#ac5b7f5d8d37aa11d5a814d1d6fb6b53f">transmitCounter</a> ()=0</td></tr>
+<tr class="memitem:ac574f1d4d57c0a4c73545c30bd04406a" id="r_ac574f1d4d57c0a4c73545c30bd04406a"><td class="memItemLeft">virtual unsigned int&#160;</td><td class="memItemRight"><a class="el" href="#ac574f1d4d57c0a4c73545c30bd04406a">receiveBufferSize</a> ()=0</td></tr>
+<tr class="memitem:ab752a62ae19e393f99295b81d502cf0e" id="r_ab752a62ae19e393f99295b81d502cf0e"><td class="memItemLeft">virtual unsigned int&#160;</td><td class="memItemRight"><a class="el" href="#ab752a62ae19e393f99295b81d502cf0e">transmitBufferSize</a> ()=0</td></tr>
 <tr class="memitem:a287066748f7675b1045614e2325d8fd9" id="r_a287066748f7675b1045614e2325d8fd9"><td class="memItemLeft">virtual unsigned int&#160;</td><td class="memItemRight"><a class="el" href="#a287066748f7675b1045614e2325d8fd9">receiveErrorCounter</a> ()=0</td></tr>
 <tr class="memitem:a9edc4e5dcf4fcfcb5258a2db29dc6d2e" id="r_a9edc4e5dcf4fcfcb5258a2db29dc6d2e"><td class="memItemLeft">virtual unsigned int&#160;</td><td class="memItemRight"><a class="el" href="#a9edc4e5dcf4fcfcb5258a2db29dc6d2e">transmitErrorCounter</a> ()=0</td></tr>
 <tr class="memitem:a575cafbc71d8a8c6b48c013cd9864de9" id="r_a575cafbc71d8a8c6b48c013cd9864de9"><td class="memItemLeft">virtual unsigned int&#160;</td><td class="memItemRight"><a class="el" href="#a575cafbc71d8a8c6b48c013cd9864de9">receiveBufferUsage</a> ()=0</td></tr>
@@ -202,6 +204,60 @@ Public Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Implemented in <a class="el" href="class_v_l_c_b_1_1_c_a_n2515.html#a0105477af5145b8bd1bbeb68c6f6c518">VLCB::CAN2515</a>, and <a class="el" href="class_v_l_c_b_1_1_serial_g_c.html#a8117aed8f2991f582ef2d799839873ff">VLCB::SerialGC</a>.</p>
+
+</div>
+</div>
+<a id="ac574f1d4d57c0a4c73545c30bd04406a" name="ac574f1d4d57c0a4c73545c30bd04406a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac574f1d4d57c0a4c73545c30bd04406a">&#9670;&#160;</a></span>receiveBufferSize()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual unsigned int VLCB::Transport::receiveBufferSize </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel pure-virtual">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Implemented in <a class="el" href="class_v_l_c_b_1_1_c_a_n2515.html#a6ea614fe89b9e94d55432d38dcd62cb3">VLCB::CAN2515</a>.</p>
+
+</div>
+</div>
+<a id="ab752a62ae19e393f99295b81d502cf0e" name="ab752a62ae19e393f99295b81d502cf0e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab752a62ae19e393f99295b81d502cf0e">&#9670;&#160;</a></span>transmitBufferSize()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual unsigned int VLCB::Transport::transmitBufferSize </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel pure-virtual">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Implemented in <a class="el" href="class_v_l_c_b_1_1_c_a_n2515.html#acacc8b3a31fdd0491983ef6f4604dd5e">VLCB::CAN2515</a>.</p>
 
 </div>
 </div>

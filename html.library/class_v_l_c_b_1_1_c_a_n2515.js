@@ -15,10 +15,11 @@ var class_v_l_c_b_1_1_c_a_n2515 =
     [ "transmitCounter", "class_v_l_c_b_1_1_c_a_n2515.html#a0105477af5145b8bd1bbeb68c6f6c518", null ],
     [ "receiveErrorCounter", "class_v_l_c_b_1_1_c_a_n2515.html#a153dcdd0131f5b95c53a771d14d61467", null ],
     [ "transmitErrorCounter", "class_v_l_c_b_1_1_c_a_n2515.html#afb5a4b7063dd48a0d20fd98f37ba8680", null ],
+    [ "receiveBufferSize", "class_v_l_c_b_1_1_c_a_n2515.html#a6ea614fe89b9e94d55432d38dcd62cb3", null ],
+    [ "transmitBufferSize", "class_v_l_c_b_1_1_c_a_n2515.html#acacc8b3a31fdd0491983ef6f4604dd5e", null ],
     [ "receiveBufferUsage", "class_v_l_c_b_1_1_c_a_n2515.html#ae93772c5088d0e5a6ebcf09e1ffa98e2", null ],
     [ "transmitBufferUsage", "class_v_l_c_b_1_1_c_a_n2515.html#afaea5bb85d5838d8038ce338bfcc54d1", null ],
     [ "receiveBufferPeak", "class_v_l_c_b_1_1_c_a_n2515.html#afbfc30f7de1a509163884025ae75db72", null ],
     [ "transmitBufferPeak", "class_v_l_c_b_1_1_c_a_n2515.html#a1135f570ebfc1d93bc9102ca5577149e", null ],
-    [ "errorStatus", "class_v_l_c_b_1_1_c_a_n2515.html#af570cc148b6b66a963a7d6f535c844ce", null ],
-    [ "canp", "class_v_l_c_b_1_1_c_a_n2515.html#a49356f1850793f4b917ea161ec9abc78", null ]
+    [ "errorStatus", "class_v_l_c_b_1_1_c_a_n2515.html#af570cc148b6b66a963a7d6f535c844ce", null ]
 ];

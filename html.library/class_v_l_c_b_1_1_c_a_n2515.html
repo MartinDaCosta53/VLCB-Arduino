@@ -130,15 +130,13 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a0105477af5145b8bd1bbeb68c6f6c518" id="r_a0105477af5145b8bd1bbeb68c6f6c518"><td class="memItemLeft">virtual unsigned int&#160;</td><td class="memItemRight"><a class="el" href="#a0105477af5145b8bd1bbeb68c6f6c518">transmitCounter</a> () override</td></tr>
 <tr class="memitem:a153dcdd0131f5b95c53a771d14d61467" id="r_a153dcdd0131f5b95c53a771d14d61467"><td class="memItemLeft">virtual unsigned int&#160;</td><td class="memItemRight"><a class="el" href="#a153dcdd0131f5b95c53a771d14d61467">receiveErrorCounter</a> () override</td></tr>
 <tr class="memitem:afb5a4b7063dd48a0d20fd98f37ba8680" id="r_afb5a4b7063dd48a0d20fd98f37ba8680"><td class="memItemLeft">virtual unsigned int&#160;</td><td class="memItemRight"><a class="el" href="#afb5a4b7063dd48a0d20fd98f37ba8680">transmitErrorCounter</a> () override</td></tr>
+<tr class="memitem:a6ea614fe89b9e94d55432d38dcd62cb3" id="r_a6ea614fe89b9e94d55432d38dcd62cb3"><td class="memItemLeft">virtual unsigned int&#160;</td><td class="memItemRight"><a class="el" href="#a6ea614fe89b9e94d55432d38dcd62cb3">receiveBufferSize</a> () override</td></tr>
+<tr class="memitem:acacc8b3a31fdd0491983ef6f4604dd5e" id="r_acacc8b3a31fdd0491983ef6f4604dd5e"><td class="memItemLeft">virtual unsigned int&#160;</td><td class="memItemRight"><a class="el" href="#acacc8b3a31fdd0491983ef6f4604dd5e">transmitBufferSize</a> () override</td></tr>
 <tr class="memitem:ae93772c5088d0e5a6ebcf09e1ffa98e2" id="r_ae93772c5088d0e5a6ebcf09e1ffa98e2"><td class="memItemLeft">virtual unsigned int&#160;</td><td class="memItemRight"><a class="el" href="#ae93772c5088d0e5a6ebcf09e1ffa98e2">receiveBufferUsage</a> () override</td></tr>
 <tr class="memitem:afaea5bb85d5838d8038ce338bfcc54d1" id="r_afaea5bb85d5838d8038ce338bfcc54d1"><td class="memItemLeft">virtual unsigned int&#160;</td><td class="memItemRight"><a class="el" href="#afaea5bb85d5838d8038ce338bfcc54d1">transmitBufferUsage</a> () override</td></tr>
 <tr class="memitem:afbfc30f7de1a509163884025ae75db72" id="r_afbfc30f7de1a509163884025ae75db72"><td class="memItemLeft">virtual unsigned int&#160;</td><td class="memItemRight"><a class="el" href="#afbfc30f7de1a509163884025ae75db72">receiveBufferPeak</a> () override</td></tr>
 <tr class="memitem:a1135f570ebfc1d93bc9102ca5577149e" id="r_a1135f570ebfc1d93bc9102ca5577149e"><td class="memItemLeft">virtual unsigned int&#160;</td><td class="memItemRight"><a class="el" href="#a1135f570ebfc1d93bc9102ca5577149e">transmitBufferPeak</a> () override</td></tr>
 <tr class="memitem:af570cc148b6b66a963a7d6f535c844ce" id="r_af570cc148b6b66a963a7d6f535c844ce"><td class="memItemLeft">virtual unsigned int&#160;</td><td class="memItemRight"><a class="el" href="#af570cc148b6b66a963a7d6f535c844ce">errorStatus</a> () override</td></tr>
-</table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 id="header-pub-attribs" class="groupheader"><a id="pub-attribs" name="pub-attribs"></a>
-Public Attributes</h2></td></tr>
-<tr class="memitem:a49356f1850793f4b917ea161ec9abc78" id="r_a49356f1850793f4b917ea161ec9abc78"><td class="memItemLeft">ACAN2515 *&#160;</td><td class="memItemRight"><a class="el" href="#a49356f1850793f4b917ea161ec9abc78">canp</a></td></tr>
 </table>
 <a name="details" id="details"></a><h2 id="header-details" class="groupheader">Detailed Description</h2>
 <div class="textblock"><p><a class="el" href="class_v_l_c_b_1_1_transport.html" title="Interface for statistics on the transport layer.">Transport</a> implementation for the MCP2515/25625 CAN controllers. </p>
@@ -518,6 +516,60 @@ Public Attributes</h2></td></tr>
 
 </div>
 </div>
+<a id="a6ea614fe89b9e94d55432d38dcd62cb3" name="a6ea614fe89b9e94d55432d38dcd62cb3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6ea614fe89b9e94d55432d38dcd62cb3">&#9670;&#160;</a></span>receiveBufferSize()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual unsigned int VLCB::CAN2515::receiveBufferSize </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span><span class="mlabel override">override</span><span class="mlabel virtual">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Implements <a class="el" href="class_v_l_c_b_1_1_transport.html#ac574f1d4d57c0a4c73545c30bd04406a">VLCB::Transport</a>.</p>
+
+</div>
+</div>
+<a id="acacc8b3a31fdd0491983ef6f4604dd5e" name="acacc8b3a31fdd0491983ef6f4604dd5e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acacc8b3a31fdd0491983ef6f4604dd5e">&#9670;&#160;</a></span>transmitBufferSize()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual unsigned int VLCB::CAN2515::transmitBufferSize </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span><span class="mlabel override">override</span><span class="mlabel virtual">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Implements <a class="el" href="class_v_l_c_b_1_1_transport.html#ab752a62ae19e393f99295b81d502cf0e">VLCB::Transport</a>.</p>
+
+</div>
+</div>
 <a id="ae93772c5088d0e5a6ebcf09e1ffa98e2" name="ae93772c5088d0e5a6ebcf09e1ffa98e2"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ae93772c5088d0e5a6ebcf09e1ffa98e2">&#9670;&#160;</a></span>receiveBufferUsage()</h2>
 
@@ -650,21 +702,6 @@ Public Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Implements <a class="el" href="class_v_l_c_b_1_1_transport.html#a666ff6c124b4ab55cdf1b9333a5ab2ee">VLCB::Transport</a>.</p>
-
-</div>
-</div>
-<a name="doc-variable-members" id="doc-variable-members"></a><h2 id="header-doc-variable-members" class="groupheader">Member Data Documentation</h2>
-<a id="a49356f1850793f4b917ea161ec9abc78" name="a49356f1850793f4b917ea161ec9abc78"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a49356f1850793f4b917ea161ec9abc78">&#9670;&#160;</a></span>canp</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">ACAN2515* VLCB::CAN2515::canp</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
 
 </div>
 </div>

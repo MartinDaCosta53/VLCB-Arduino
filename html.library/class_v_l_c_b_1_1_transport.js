@@ -3,6 +3,8 @@ var class_v_l_c_b_1_1_transport =
     [ "reset", "class_v_l_c_b_1_1_transport.html#aec481ae46f39ec45c34a187314f4293e", null ],
     [ "receiveCounter", "class_v_l_c_b_1_1_transport.html#a82139fd2fd052a99781e4a4489d8a7ee", null ],
     [ "transmitCounter", "class_v_l_c_b_1_1_transport.html#ac5b7f5d8d37aa11d5a814d1d6fb6b53f", null ],
+    [ "receiveBufferSize", "class_v_l_c_b_1_1_transport.html#ac574f1d4d57c0a4c73545c30bd04406a", null ],
+    [ "transmitBufferSize", "class_v_l_c_b_1_1_transport.html#ab752a62ae19e393f99295b81d502cf0e", null ],
     [ "receiveErrorCounter", "class_v_l_c_b_1_1_transport.html#a287066748f7675b1045614e2325d8fd9", null ],
     [ "transmitErrorCounter", "class_v_l_c_b_1_1_transport.html#a9edc4e5dcf4fcfcb5258a2db29dc6d2e", null ],
     [ "receiveBufferUsage", "class_v_l_c_b_1_1_transport.html#a575cafbc71d8a8c6b48c013cd9864de9", null ],

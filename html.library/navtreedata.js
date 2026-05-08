@@ -63,12 +63,12 @@ var NAVTREE =
 var NAVTREEINDEX =
 [
 "_abstract_event_teaching_service_8cpp.html",
-"class_v_l_c_b_1_1_configuration.html",
-"class_v_l_c_b_1_1_event_consumer_service.html#add8db627d4b2d0d65b620f6239acc883",
-"class_v_l_c_b_1_1_minimum_node_service.html#ab88b75a144d7bcbd9258a19ce8af0a1e",
-"functions_v.html",
-"vlcbdefs_8hpp.html#a1b13177ef0977f1f71d814fb32868268a8f3102549f2a1cadf754b06d3c8ebb98",
-"vlcbdefs_8hpp.html#ab0a99f2600a899ad3f05834d22c3c2d5a0661693958df844ce77d622d47129966"
+"class_v_l_c_b_1_1_circular_buffer.html#ac8bd8f52e51dcc01fb01b5c1f07d6852",
+"class_v_l_c_b_1_1_event_consumer_service.html#a58c87764c1fd1964dd57be272cf647b2",
+"class_v_l_c_b_1_1_minimum_node_service.html#aa72e36ee9490218251d94e0a34f243f1",
+"functions_o.html",
+"vlcbdefs_8hpp.html#a1b13177ef0977f1f71d814fb32868268a5fb74ad8e998c9709078685790abb4a8",
+"vlcbdefs_8hpp.html#ab07f338372abc62f46ad390d6d3655b8afca52e5477de52df7ff5582dcea86b86"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronization';
