@@ -72,7 +72,7 @@ public:
   virtual unsigned int errorStatus() override { return canp->errorFlagRegister(); }
 
 private:
-  ACAN2515 *canp;   // pointer to CAN object so user code can access its members
+  ACAN2515 *canp;   // pointer to CAN object
   unsigned int _numMsgsSent, _numMsgsRcvd;
   unsigned long _osc_freq;
   byte _csPin, _intPin;
