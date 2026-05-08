@@ -31,7 +31,7 @@ var searchData=
   ['serialuserinterface_2ecpp_28',['SerialUserInterface.cpp',['../_serial_user_interface_8cpp.html',1,'']]],
   ['serialuserinterface_2eh_29',['SerialUserInterface.h',['../_serial_user_interface_8h.html',1,'']]],
   ['service_30',['Service',['../class_v_l_c_b_1_1_service.html',1,'VLCB']]],
-  ['service_20api_31',['Service API',['../class_v_l_c_b_1_1_event_consumer_service.html#autotoc_md0',1,'Event Consumer Service API'],['../class_v_l_c_b_1_1_event_producer_service.html#autotoc_md1',1,'Event Producer Service API']]],
+  ['service_20api_31',['Service API',['../class_v_l_c_b_1_1_consume_own_events_service.html#autotoc_md0',1,'Consue Own Events Service API'],['../class_v_l_c_b_1_1_event_consumer_service.html#autotoc_md1',1,'Event Consumer Service API'],['../class_v_l_c_b_1_1_event_producer_service.html#autotoc_md2',1,'Event Producer Service API']]],
   ['service_2ecpp_32',['Service.cpp',['../_service_8cpp.html',1,'']]],
   ['service_2eh_33',['Service.h',['../_service_8h.html',1,'']]],
   ['service_5fid_5fboot_34',['SERVICE_ID_BOOT',['../vlcbdefs_8hpp.html#afabb37ae14e252c654fd10b14ee0c88faf8799d8557d60025cccbe4ae17fd65f9',1,'vlcbdefs.hpp']]],

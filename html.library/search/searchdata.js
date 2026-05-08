@@ -9,7 +9,7 @@ var indexSectionsWithContent =
   6: "aefmv",
   7: "abcefghilmopst",
   8: "_adp",
-  9: "acefpsv"
+  9: "acefopsv"
 };
 
 var indexSectionNames =
