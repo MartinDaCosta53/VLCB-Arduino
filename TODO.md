@@ -41,6 +41,7 @@ next request.
 Responses to Start-of-Day may get intermingled with MMC/FCU requests.
 
 Throttle running of these tasks if the Action queue is getting full.
+Also, only run a task once every 1ms.
 
 Could this be implemented as a service?
 This would then be run from the general process() loop.
@@ -160,6 +161,24 @@ into the action queue.
    of queueing actions for any piece of code that creates messages.
    Of course the action consumers must be able to receive these single messges,
    which means that CAN transport must have enough buffer space for those messags.
+
+## Split `Service.process(Action *)` into `poll()` and `processAction(Action)`
+
+Current `process(Action *)` takes a pointer that may be null if there is
+no active action.
+This function has to perform both the house-keeping tasks and process any action.
+
+Split these two tasks into `poll()` for house-keeping tasks and `processAction(Action&)`
+so that each function do one thing only. 
+A service that do not need house-keeping does not need to implement `poll()`.
+The `processAction()` will only be called when there is an action available.
+
+This also means that there is no need to implement `poll()` if there are no 
+house-keeping to do for a service.
+Also, there is no need for checking if the pointer to an action is null.
+
+This TODO is inspired by Ian Hogg's `VLCBlib_PIC` library.
+See the global `poll()` function in the file `vlcb.c`.
 
 ## Documentation
 
