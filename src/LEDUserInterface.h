@@ -12,19 +12,25 @@
 
 namespace VLCB
 {
-
-const unsigned int SW_TR_HOLD = 4000U;  // Controller push button hold time for SLiM/FLiM transition in millis = 4 seconds
-
+/// @brief User interface "service" that communicates with LEDs and a push button.
+/// 
+/// This service manages the green and yellow LEDs and mode push button on
+/// a VLCB module. The LEDs indicate current mode and any activity. The push
+/// button allows the user to change mode. 
+/// See `VLCB Technical Introduction` document for details about how the LEDs
+/// and push button are used.
 class LEDUserInterface : public Service
 {
 public:
   LEDUserInterface(byte greenLedPin, byte yellowLedPin, byte pushButtonPin);
 
+  /// @cond LIBRARY
   virtual VlcbServiceTypes getServiceID() const override { return SERVICE_ID_NONE; };
   virtual byte getServiceVersionID() const override { return 1; };
 
   bool isButtonPressed();
   virtual void process(const Action *action) override;
+  /// @endcond 
 
 private:
   LED greenLed;

@@ -24,17 +24,14 @@ static const byte NUM_TX_BUFFS = 2;                         // default value
 static const uint32_t CANBITRATE = 125000UL;                // 125Kb/s - fixed for VLCB
 static const uint32_t OSCFREQ = 16000000UL;                 // crystal frequency default
 
-//
-/// an implementation of the Transport interface class
-/// to support the MCP2515/25625 CAN controllers
-//
-
+/// @brief Transport implementation for the MCP2515/25625 CAN controllers
 class CAN2515 : public CanTransport
 {
 public:
 
   CAN2515();
 
+  /// @cond LIBRARY
   // these methods are declared virtual in the base class and must be implemented by the derived class
 #ifdef ARDUINO_ARCH_RP2040
   bool begin(bool poll = false, SPIClassRP2040 & spi = SPI);    // note default args
@@ -70,6 +67,7 @@ public:
   virtual unsigned int receiveBufferPeak() override { return canp->receiveBufferPeakCount(); };
   virtual unsigned int transmitBufferPeak() override { return canp->transmitBufferPeakCount(0); };
   virtual unsigned int errorStatus() override { return canp->errorFlagRegister(); }
+  /// @endcond
 
 private:
   ACAN2515 *canp;   // pointer to CAN object
